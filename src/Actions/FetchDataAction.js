@@ -1,5 +1,6 @@
 import axios from 'axios';
 
+
 // const ROOT_URL = 'https:www.metaweather.com/api/location/44418/';
 
 const ROOT_URL = 'http://localhost:8080/getallposts';
@@ -26,13 +27,77 @@ export const FetchData = () => {
     }
 };
 
-
-export const getPostById = (id) => {
+ export const getPostByTopic = (id) => {
     return {
-        type: 'GET_POST',
-        payload: axios.get(`http://localhost:8080/getpostsbyid/${id}`)
+          type: 'GET_POST',
+          payload: axios.get(`http://localhost:8080/getpostsbyTopic/${id}`)
+                 .then((response) => {
+                     return { response } 
+                 })
+                 .catch((error) => {
+                     return { error }
+                 })
     }
 };
+
+
+export const getPostsByUser = (userid) => {
+    return {
+        type: 'GET_POST_BY_USER',
+        payload: axios.get(`http://localhost:8080/getpostsbyUser/${userid}`)
+                .then((response) => {
+                    return { response } 
+                })
+                .catch((error) => {
+                    return { error }
+                })
+    }
+};
+
+export const getUserDetails = (userid) => {
+    return {
+        type: 'GET_POST_BY_USER',
+        payload: axios.get(`http://localhost:8080/getuserDetails/${userid}`)
+                .then((response) => {
+                    return { response } 
+                })
+                .catch((error) => {
+                    return { error }
+                })
+    }
+};
+
+// export const getPostByTopic = (id) => {
+//     axios.get(`http://localhost:8080/getpostsbyTopic/${id}`)
+//         .then((response) => {
+//             dispatch({ type: 'GET_POST', payload: response.data})
+//         })
+//         .catch(error => { 
+//             dispatch({ type: 'error', payload: error})
+//         }
+//     )    
+//     return {
+//         type: 'GET_POST',
+//         payload: datvalue.then((result) => {
+//             return { result };
+//         }).catch((err) =>
+//             {throw err;})
+//     }
+// };
+
+
+// export const getPostByTopic = (id) => {
+//      return (dispatch) => {
+//          return axios.get(`http://localhost:8080/getpostsbyTopic/${id}`)
+//              //.then(response => response.data)
+//              .then(response => {
+//                  dispatch({
+//                      type: 'GET_POST',
+//                      payload: response.data
+//                  });
+//              }) 
+//          }
+//  };
 
 
 
