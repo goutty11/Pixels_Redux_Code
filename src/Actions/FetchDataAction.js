@@ -67,6 +67,39 @@ export const getUserDetails = (userid) => {
     }
 };
 
+
+export const getVoterInfoByPost = (postid) => {
+    return {
+        type: 'GET_VOTER_INFO',
+        payload: axios.get(`http://localhost:8080/getvoterinfobypost/${postid}`)
+                .then((response) => {
+                    return { response } 
+                })
+                .catch((error) => {
+                    return { error }
+                })
+    }
+};
+
+export const getComments = (postid, limit) => {
+    return {
+        type: 'GET_COMMENTS',
+        payload: axios.get(`http://localhost:8080/getcommentsbypost/${postid}/${limit}`)
+                // axios.get('http://localhost:8080/getcommentsbypost', {
+                //     params : {
+                //         postid: postid,
+                //         limit: limit
+                //     }
+                // })
+                .then((response) => {
+                    return { response } 
+                })
+                .catch((error) => {
+                    return { error }
+                })
+    }
+};
+
 // export const getPostByTopic = (id) => {
 //     axios.get(`http://localhost:8080/getpostsbyTopic/${id}`)
 //         .then((response) => {

@@ -21,6 +21,16 @@ export const FetchDataReducer = (state=[], action) => {
                 ...state,
                 action.payload
             ];
+        case 'GET_VOTER_INFO':
+            return [
+                ...state,
+                action.payload
+            ];
+        case 'GET_COMMENTS':
+            return [
+                ...state,
+                action.payload
+            ];
         default:
             return state;
         }

@@ -1,5 +1,5 @@
 import { createStore, applyMiddleware, compose } from 'redux';
-import { FetchData, getPostByTopic, getPostsByUser, getUserDetails } from '../Actions/FetchDataAction';
+import { FetchData, getPostByTopic, getPostsByUser, getUserDetails, getVoterInfoByPost, getComments } from '../Actions/FetchDataAction';
 import { FetchDataReducer } from '../Reducers/FetchDataReducer';
 import thunk from 'redux-thunk';
 // import Common from './Common/Common';
@@ -12,7 +12,9 @@ const store = createStore(FetchDataReducer, composeEnhancers(applyMiddleware(thu
 // store.dispatch(FetchData());
 //store.dispatch(getPostByTopic(2));
 // store.dispatch(getPostsByUser(1));
-store.dispatch(getUserDetails(2));
+//store.dispatch(getUserDetails(2));
+//store.dispatch(getVoterInfoByPost(2));
+store.dispatch(getComments(1, 2));
 
 console.log(store.getState());
 export default store;
