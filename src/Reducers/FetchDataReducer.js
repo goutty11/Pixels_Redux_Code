@@ -1,10 +1,10 @@
 
 export const FetchDataReducer = (state=[], action) => {
     switch(action.type){
-        case 'FETCH_DATA':
+        case 'GET_INITIAL_INFO':
             return [
                     ...state,
-                    action.payload.data
+                    action.payload
                 ];
         case 'GET_POST':
             return[
@@ -36,4 +36,3 @@ export const FetchDataReducer = (state=[], action) => {
         }
     };
 
-// export default FetchDataReducer;

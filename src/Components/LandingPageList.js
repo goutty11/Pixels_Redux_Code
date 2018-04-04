@@ -6,9 +6,6 @@ import store from '../store/configureStore';
 
 import './LandingPageList.css';
 
-
-//store.dispatch(FetchData());
-
 const LandingPageList = ({result}) => {
     return (
         <div className="Landing">
