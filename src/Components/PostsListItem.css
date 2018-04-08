@@ -1,0 +1,19 @@
+.Result {
+    border-style: solid;
+    border-width: 1px;
+    width: 75%;
+    height: 125px;
+    background-color: lightgray;
+}
+
+.post {
+    border-style: solid;
+    border-width: 1px;
+    width: 85%;
+    margin-bottom: 5%;
+}
+
+.post > .ImageSize {
+    width: 65%;
+    height: 40%;
+}

@@ -1,7 +1,9 @@
 .Landing {
     border-style: solid;
     border-width: 1px;
-    height: 550px;
-    width: 95%;
+    margin: auto;
+    margin-top: 5%;
+    min-height:1500px;
+    width: 50%;
     background-color:lightblue;
 }

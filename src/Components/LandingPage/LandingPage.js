@@ -1,34 +1,15 @@
 import React from 'react';
-// import { FetchData } from '../../Actions/FetchDataAction';
 import { connect } from 'react-redux';
-import LandingPageListItem from '../LandingPageListItem';
-
-
+import PostsListItem from '../PostsListItem';
+import InitialInformationItem from '../InitialInformation/InitialInformationItem';
 import './LandingPage.css';
-
-// const LandingPageList = (props) => {
-//     return (
-//         <div className="Landing">
-//             {props.voterdetails} 
-//         </div>
-//     );
-// };
-
-// const mapStateToProps = (state) => {
-//     return {
-//         voterdetails: state.voterdetails
-//     };
-// };
-
-// export default connect(mapStateToProps)(LandingPageList);
-
 
 const LandingPageList = (props) => {
     return (
         <div className="Landing">
             {props.postdetails.map(post => {
                     return (
-                        <LandingPageListItem key={post.post_id} {...post} />
+                        <PostsListItem key={post.post_id} {...post} />
                     );
                 })
             }
@@ -38,7 +19,8 @@ const LandingPageList = (props) => {
 
 const mapStateToProps = (state) => {
     return {
-        postdetails: state.postdetails,
+        postdetails: state.postdetail.postdetails,
+        initialInformation : state.initialInformation.initialInformation
     };
 };
 
