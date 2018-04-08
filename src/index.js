@@ -1,14 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import LandingPage from './Components/LandingPage/LandingPage';
 import { Provider } from 'react-redux';
-import store from './store/configureStore';
+
+import store from './state/store';
+
+import App from './components/App/App';
 
 ReactDOM.render(
     <Provider store={store}>
-        <LandingPage />
+        <App />
     </Provider>,
 document.getElementById('root'));
-
-
-
