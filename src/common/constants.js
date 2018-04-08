@@ -1,4 +1,6 @@
 export const GET_POSTS_BY_TOPIC = 'GET_POSTS_BY_TOPIC';
+export const PIXELS_BASE_URL = `https://pixels-node-api.herokuapp.com`;
+
 export const GET_INITIAL_INFO = 'GET_INITIAL_INFO';
 
 export const GET_POSTS_BY_TOPIC_PENDING = 'GET_POSTS_BY_TOPIC_PENDING';

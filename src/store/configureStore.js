@@ -1,5 +1,5 @@
 import { createStore, applyMiddleware, compose } from 'redux';
-import { getComments } from '../Actions/geCommentsAction';
+import { getComments } from '../Actions/getCommentsAction';
 import { getInitialInfo } from '../Actions/getInitialInfoAction';
 import { getPostByTopic, getPostsByUser } from '../Actions/getPostsAction';
 import { getUserDetails } from '../Actions/getUserDetails';
@@ -20,9 +20,7 @@ const store = createStore(
     }),
     composeEnhancers(applyMiddleware(createLogger(), thunk, promise())));
 
-//const middlewarefile = applyMiddleware(logger(), thunk, promise());
 
-//const store = createStore(FetchDataReducer, applyMiddleware(logger(), thunk, promise()));
 
 
 store.dispatch(getInitialInfo(2));
