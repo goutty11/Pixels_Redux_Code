@@ -4,21 +4,21 @@ import {
     GET_POSTS_BY_TOPIC_REJECTED
 } from '../../common/constants';
 
-const postsByTopic = {
+const postsByTopicInitialState = {
     fetching: false,
     fetched: false,
     error: null,
     posts: []
 };
 
-export const postsByTopicReducer = (state = postsByTopic, action) => {
+export const postsByTopic = (state = postsByTopicInitialState, action) => {
     switch (action.type) {
         case GET_POSTS_BY_TOPIC_PENDING:
             return { ...state, fetching: true };
         case GET_POSTS_BY_TOPIC_FULFILLED:
-            return { ...state, fetching: false, posts: action.payload.items };
+            return { ...state, fetching: false, posts: action.payload.data.items };
         case GET_POSTS_BY_TOPIC_REJECTED:
-            return { ...state, fetching: false, error: action.payload.error };
+            return { ...state, fetching: false, error: action.payload.data.error };
         default:
             return state;
     }

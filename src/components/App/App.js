@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 import './App.css';
 
 import store from "../../state/store";
-import Posts from "../Posts/Posts";
+import PostsList from "../PostsList/PostsList";
 
 import { getPostByTopic } from "../../state/actions/posts.actions";
 
@@ -20,7 +20,7 @@ class App extends React.Component {
     
                 <Footer /> */}
     
-                <Posts items={ this.props.posts } />
+                <PostsList items={ this.props.postsByTopic.posts } />
             </div>
         );
     }

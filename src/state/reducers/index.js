@@ -1,8 +1,8 @@
 import { combineReducers } from 'redux';
-import { initialInfoReducer } from './common.reducer';
-import { postsByTopicReducer } from './posts.reducer';
+import { initialInfo } from './common.reducer';
+import { postsByTopic } from './posts.reducer';
 
 export default combineReducers({
-    initialInfoReducer,
-    postsByTopicReducer
+    initialInfo,
+    postsByTopic
 });
