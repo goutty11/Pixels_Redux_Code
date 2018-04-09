@@ -13,7 +13,7 @@ class PostsByTopic extends Component {
     render() {
         return (
             <div>
-                <PostsList items={ this.props.PostsByTopic.items } />
+                <PostsList items={ this.props.PostsByTopic.posts } />
             </div>
         );
     }
