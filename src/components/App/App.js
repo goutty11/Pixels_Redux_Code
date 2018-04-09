@@ -10,7 +10,7 @@ import { getPostByTopic } from "../../state/actions/posts.actions";
 
 class App extends React.Component {
     componentWillMount () {
-        store.dispatch(getPostByTopic(1));
+        store.dispatch(getPostByTopic(2));
     }
 
     render () {
