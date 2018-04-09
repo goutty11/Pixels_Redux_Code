@@ -6,14 +6,13 @@ import { connect } from 'react-redux';
 import { getPostByTopic } from '../../state/actions/posts.actions';
 
 class PostsByTopic extends Component {
-
     componenWillMount() {
         store.dispatch(getPostByTopic(1));
     }
     render() {
         return (
             <div>
-                <PostsList items={ this.props.PostsByTopic.posts } />
+                <PostsList items={ this.props.postsByTopic.posts } />
             </div>
         );
     }
