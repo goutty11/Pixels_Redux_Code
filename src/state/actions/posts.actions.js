@@ -14,7 +14,7 @@ export const getPostByTopic = (id) => {
 };
 
 
-export const getPostsByUser = (id) => {
+export const getPostByUser = (id) => {
     return {
         type: GET_POSTS_BY_USER,
         payload: axios.get(`${PIXELS_API_URL}/get_posts_by_user/${id}`)
