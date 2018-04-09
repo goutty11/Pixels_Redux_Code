@@ -9,6 +9,29 @@ import PostsByUserList from "../PostsByUserList/PostsByUserList";
 
 import { getPostByTopic, getPostByUser } from "../../state/actions/posts.actions";
 
+// class App extends React.Component {
+//     componentWillMount () {
+//         //store.dispatch(getPostByTopic(2));
+//         store.dispatch(getPostByUser(2));
+//     }
+
+//     render () {
+//         return (
+//             <div className="App">
+//                 {/* <Header />
+    
+//                 <Footer /> */}
+    
+//                  {/* <PostsList items={ this.props.postsByTopic.posts } />*/ } 
+//                  <PostsByUserList items= {this.props.postsByUser.postslist} /> 
+
+//             </div>
+//         );
+//     }
+// };
+
+// const mapStateToProps = (state) => state;
+
 class App extends React.Component {
     componentWillMount () {
         //store.dispatch(getPostByTopic(2));
@@ -23,12 +46,17 @@ class App extends React.Component {
                 <Footer /> */}
     
                  {/* <PostsList items={ this.props.postsByTopic.posts } />*/ } 
-                 <PostsByUserList items= {this.props.postsByUser.postslist} /> 
+                 <PostsByUserList items= {this.props.postsByUser.PostsList} /> 
 
             </div>
         );
     }
 };
 
-const mapStateToProps = (state) => state;
+const mapStateToProps = (state) => {
+    return {
+        postsByUser: state.postsByUser
+    }
+}
+
 export default connect(mapStateToProps)(App);
