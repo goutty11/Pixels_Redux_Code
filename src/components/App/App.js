@@ -5,13 +5,14 @@ import './App.css';
 
 import store from "../../state/store";
 import PostsList from "../PostsList/PostsList";
+import PostsByUserList from "../PostsByUserList/PostsByUserList";
 
 import { getPostByTopic, getPostByUser } from "../../state/actions/posts.actions";
 
 class App extends React.Component {
     componentWillMount () {
-        store.dispatch(getPostByTopic(2));
-        //store.dispatch(getPostByUser(2));
+        //store.dispatch(getPostByTopic(2));
+        store.dispatch(getPostByUser(2));
     }
 
     render () {
@@ -21,7 +22,9 @@ class App extends React.Component {
     
                 <Footer /> */}
     
-                <PostsList items={ this.props.postsByTopic.posts } />
+                {/* <PostsList items={ this.props.postsByTopic.posts } /> */}
+                <PostsByUserList items= {this.props.postsByUser.posts} />
+
             </div>
         );
     }
