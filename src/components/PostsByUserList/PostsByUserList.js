@@ -7,7 +7,12 @@ const Posts = (props) => {
         <div className="Wrapper">
             {
                 props.items && props.items.map(post => {
-                    return <UserPostListItem postItem={post} />;
+                    return (
+                        <div>
+                            {post.postItem.postItem.post_id}
+                        </div>
+                    );
+                    //return <UserPostListItem postItem={post} />;
                 })
             }
         </div>
