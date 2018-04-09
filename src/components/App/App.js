@@ -46,7 +46,7 @@ class App extends React.Component {
                 <Footer /> */}
     
                  {/* <PostsList items={ this.props.postsByTopic.posts } />*/ } 
-                 <PostsByUserList items= {this.props.postsByUser.PostsList} /> 
+                 <PostsByUserList items= {this.props.postslist} /> 
 
             </div>
         );
