@@ -11,8 +11,8 @@ import { getPostByTopic, getPostByUser } from "../../state/actions/posts.actions
 
 class App extends React.Component {
     componentWillMount () {
-        //store.dispatch(getPostByTopic(2));
-        store.dispatch(getPostByUser(2));
+        store.dispatch(getPostByTopic(2));
+        //store.dispatch(getPostByUser(2));
     }
 
     render () {
@@ -22,8 +22,8 @@ class App extends React.Component {
     
                 <Footer /> */}
     
-                {/* <PostsList items={ this.props.postsByTopic.posts } /> */}
-                <PostsByUserList items= {this.props.postsByUser.postslist} />
+                 <PostsList items={ this.props.postsByTopic.posts } /> 
+                {/* <PostsByUserList items= {this.props.postsByUser.postslist} /> */}
 
             </div>
         );
