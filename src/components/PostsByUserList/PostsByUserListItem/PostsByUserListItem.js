@@ -24,7 +24,7 @@ class PostsByUserListItem extends Component {
     }
 
     votehere = () => {
-        store.dispatch(AddVote({postid:this.props.postItem.post_id, userid: 1 }));
+        store.dispatch(AddVote({postid:this.props.postItem.post_id, userid: 5 }));
     }
 
     render() {
