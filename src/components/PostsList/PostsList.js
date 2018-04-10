@@ -7,10 +7,7 @@ const Posts = (props) => {
         <div className="Landing">
             {
                 props.items && props.items.map(post => {
-                    return 
-                    (
-                        <PostsListItem post={post} />
-                    );
+                    return <PostsListItem post={post} />;
                 })
             }
         </div>
