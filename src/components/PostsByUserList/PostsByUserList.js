@@ -7,7 +7,7 @@ const Posts = (props) => {
         <div className="Wrapper">
             {
                 props.items && props.items.map(post => {
-                    return <PostsByUserListItem postItem={post} />;
+                    return <PostsByUserListItem key={post.post_id} postItem={post} />;
                 })
             }
         </div>
