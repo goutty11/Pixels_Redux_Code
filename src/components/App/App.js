@@ -30,13 +30,13 @@ import { AddVote } from "../../state/actions/votes.actions";
              <div className="App">
                   <button onClick={this.vote}>Vote</button>
                   {/* <PostsList items={ this.props.postsByTopic.posts } /> */}
-                  <PostsByUserList items= {this.props.postsByUser.postsList} />  
+                  <PostsByUserList items= {this.props.postsList} />  
              </div>
          );
      }
  };
 
- const mapStateToProps = (state) => state;
+ const mapStateToProps = (state) => state.postsByUser;
 
 //  const mapStateToProps = (state) => {
 //     return {
