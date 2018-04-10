@@ -26,9 +26,9 @@ class PostsByUserListItem extends Component {
 
     votehere = () => {
         store.dispatch(AddVote({postid:this.props.postItem.post_id, userid: 5 }));
-        this.setState = ({
+        this.setState({
             isVote: !this.state.isVote
-        })
+        });
     }
 
     render() {
@@ -38,7 +38,7 @@ class PostsByUserListItem extends Component {
                 <span>{this.props.postItem.post_id}</span>
                 <div className="ImageSize"><img src={this.props.postItem.URL}/></div>
                 <button onClick={this.votehere}>Vote here</button>
-                {this.state.isVote && <p>you</p>}
+                {this.state.isVote ? <p>you voted</p>: <p>Didn't vote</p> }
                 <span><h1>Description</h1></span>
                 <span>{this.props.postItem.post_description}</span>
                 <div><h1>Number of votes</h1><span>{this.props.postItem.vote_count}</span></div> 
