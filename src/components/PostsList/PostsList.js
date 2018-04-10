@@ -7,7 +7,7 @@ const Posts = (props) => {
         <div className="Landing">
             {
                 props.items && props.items.map(post => {
-                    return <PostsListItem post={post} />;
+                    return <PostsListItem key={post.post_id} post={post} />;
                 })
             }
         </div>
