@@ -11,25 +11,19 @@ import { getPostByTopic, getPostByUser } from "../../state/actions/posts.actions
 import { postAddVote } from '../../state/actions/votes.actions';
 
  class App extends React.Component {
-    constructor(props){
-        super(props);
-   
-        this.vote = this.vote.bind(this);
-    }
+    
 
      componentWillMount () {
          store.dispatch(getPostByTopic(2));
         //store.dispatch(getPostByUser(2));
      }
 
-     vote = () => {
-         store.dispatch(postAddVote(2,1));
-     }
+     
 
      render () {
          return (
              <div className="App">
-                <div onClick={this.vote}><input type="button">Vote</input></div>
+                
                  
     
                   {/* <PostsList items={ this.props.postsByTopic.posts } /> */}
