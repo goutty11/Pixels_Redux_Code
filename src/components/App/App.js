@@ -29,10 +29,8 @@ import { postAddVote } from '../../state/actions/votes.actions';
      render () {
          return (
              <div className="App">
-                <div onClick={this.vote}><input type="button">Vote</input></div>
-                 {/* <Header />
-    
-                 <Footer /> */}
+                {/*<div onClick={this.vote}><input type="button">Vote</input></div>*/}
+                 
     
                    <PostsList items={ this.props.postsByTopic.posts } />
                   {/* <PostsByUserList items= {this.props.postsByUser.postslist} /> */}
