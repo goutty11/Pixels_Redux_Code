@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import store from "../../state/store";
-
+import { postAddVote } from '../../state/actions/votes.actions';
 
 class Votetest extends Component {
     constructor(props){

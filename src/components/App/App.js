@@ -8,7 +8,7 @@ import PostsList from "../PostsList/PostsList";
 import PostsByUserList from "../PostsByUserList/PostsByUserList";
 
 import { getPostByTopic, getPostByUser } from "../../state/actions/posts.actions";
-import { postAddVote } from '../../state/actions/votes.actions';
+
 
  class App extends React.Component {
     
