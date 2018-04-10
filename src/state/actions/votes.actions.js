@@ -6,7 +6,7 @@ import {
 
 
 
-export const AddVote = (postid, userid) => {
+export const AddVote = ({postid, userid}) => {
     return {
         type: POST_ADD_VOTE,
         payload: axios.post(`${PIXELS_API_URL}/add_vote/${postid}/${userid}`)
