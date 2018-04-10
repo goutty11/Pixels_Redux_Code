@@ -17,8 +17,8 @@ import { AddVote } from "../../state/actions/votes.actions";
         this.vote = this.vote.bind(this);
     }
      componentWillMount () {
-        store.dispatch(getPostByTopic(2));
-        //store.dispatch(getPostByUser(2));
+        //store.dispatch(getPostByTopic(2));
+        store.dispatch(getPostByUser(2));
      }
 
      vote = () => {
@@ -29,14 +29,20 @@ import { AddVote } from "../../state/actions/votes.actions";
          return (
              <div className="App">
                   <button onClick={this.vote}>Vote</button>
-                  <PostsList items={ this.props.postsByTopic.posts } /> 
-                  {/*<PostsByUserList items= {this.props.postsByUser.postslist} /> */}
+                  {/*<PostsList items={ this.props.postsByTopic.posts } /> */}
+                  <PostsByUserList items= {this.props.postslist} /> 
              </div>
          );
      }
  };
 
- const mapStateToProps = (state) => state;
+ //const mapStateToProps = (state) => state;
+
+ const mapStateToProps = (state) => {
+    return {
+        postslist: state.postslist
+    }   
+ }
  export default connect(mapStateToProps)(App);
 
 
