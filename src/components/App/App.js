@@ -38,11 +38,6 @@ import { AddVote } from "../../state/actions/votes.actions";
 
  const mapStateToProps = (state) => state;
 
-//   const mapStateToProps = (state) => {
-//      return {
-//          posts: state.postsByTopic
-//      }   
-//   }
  export default connect(mapStateToProps)(App);
 
 
