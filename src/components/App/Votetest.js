@@ -16,7 +16,7 @@ class Votetest extends Component {
     render() {
         return (
             <div>
-                <div onClick={this.vote}><input type="button">Vote</input></div>
+                <div onClick={this.vote}>Vote</div>
             </div>
         );
     }
