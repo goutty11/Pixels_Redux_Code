@@ -8,7 +8,7 @@ const postsByUserInitialState = {
     fetching: false,
     fetched: false,
     error: null,
-    postslist: []
+    UserPosts: []
 }
 
 export const postsByUser = (state = postsByUserInitialState, action) => {
@@ -16,7 +16,7 @@ export const postsByUser = (state = postsByUserInitialState, action) => {
         case GET_POSTS_BY_USER_PENDING:
             return { ...state, fetching: true};
         case GET_POSTS_BY_USER_FULFILLED:
-            return { ...state, fetching: false, postslist: action.payload.data.items };
+            return { ...state, fetching: false, UserPosts: action.payload.data.items };
         case GET_POSTS_BY_USER_REJECTED:
             return { ...state, fetching: false, error: action.payload.data.error };
         default:
