@@ -2,6 +2,9 @@ import {
     GET_POSTS_BY_TOPIC_PENDING,
     GET_POSTS_BY_TOPIC_FULFILLED,
     GET_POSTS_BY_TOPIC_REJECTED,
+    GET_POSTS_BY_USER_PENDING,
+    GET_POSTS_BY_USER_FULFILLED,
+    GET_POSTS_BY_USER_REJECTED
 } from '../../common/constants';
 
 const postsByTopicInitialState = {
