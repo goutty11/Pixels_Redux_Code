@@ -11,8 +11,6 @@ const postsByTopicInitialState = {
     posts: []
 };
 
-
-
 export const postsByTopic = (state = postsByTopicInitialState, action) => {
     switch (action.type) {
         case GET_POSTS_BY_TOPIC_PENDING:

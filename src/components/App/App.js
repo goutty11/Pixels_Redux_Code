@@ -30,7 +30,7 @@ import { AddVote } from "../../state/actions/votes.actions";
              <div className="App">
                   <button onClick={this.vote}>Vote</button>
                   {/* <PostsList items={ this.props.postsByTopic.posts } /> */}
-                  <PostsByUserList items= {this.props.postsByUser.posts} />  
+                  <PostsByUserList items= {this.props.postsByUser.Userposts} />  
              </div>
          );
      }
