@@ -10,6 +10,6 @@ import Votetest from './components/App/Votetest';
 
 ReactDOM.render(
     <Provider store={store}>
-        <Votetest />
+        <App />
     </Provider>,
 document.getElementById('root'));
