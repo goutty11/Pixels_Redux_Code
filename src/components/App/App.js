@@ -8,7 +8,7 @@ import PostsList from "../PostsList/PostsList";
 import PostsByUserList from "../PostsByUserList/PostsByUserList";
 
 import { getPostByTopic, getPostByUser } from "../../state/actions/posts.actions";
-import { postAddVote } from "../../state/actions/votes.actions";
+import { AddVote } from "../../state/actions/votes.actions";
 
  class App extends React.Component {
     constructor(props){
@@ -22,7 +22,7 @@ import { postAddVote } from "../../state/actions/votes.actions";
      }
 
      vote = () => {
-        store.dispatch(postAddVote(2,1));
+        store.dispatch(AddVote(2,1));
      }
 
      render () {
