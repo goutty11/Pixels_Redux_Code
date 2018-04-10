@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import './PostsByUserListItem.css';
 import store from "../../../state/store";
 import { AddVote } from '../../../state/actions/votes.actions';
-import { AddVote } from '../../../state/actions/votes.actions';
+
 
 // const PostsByUserListItem = (props) => (
 //     <div className="postDetails">
