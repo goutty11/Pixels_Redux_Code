@@ -31,39 +31,13 @@ import { postAddVote } from "../../state/actions/votes.actions";
                   <button onClick={this.vote}>Vote</button>
                   <PostsList items={ this.props.postsByTopic.posts } />
                   {/* <PostsByUserList items= {this.props.postsByUser.postslist} /> */}
-
              </div>
          );
      }
  };
 
  const mapStateToProps = (state) => state;
+ export default connect(mapStateToProps)(App);
 
-// class App extends React.Component {
-  //   componentWillMount () {
-    //     store.dispatch(getPostByTopic(2));
-//         store.dispatch(getPostByUser(2));
-//     }
 
-//     render () {
-//         return (
-//             <div className="App">
-//                 {/* <Header />
-    
-//                 <Footer /> */}
-    
-//                  {/* <PostsList items={ this.props.postsByTopic.posts } />*/ } 
-//                  <PostsByUserList items= {this.props.postslist} /> 
 
-//             </div>
-//         );
-//     }
-// };
-
-// const mapStateToProps = (state) => {
-//     return {
-//         postsByUser: state.postsByUser
-//     }
-// }
-
-export default connect(mapStateToProps)(App);

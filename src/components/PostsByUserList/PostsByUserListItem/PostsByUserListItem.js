@@ -1,7 +1,7 @@
 import React from 'react';
-import './UserPostListItem.css';
+import './PostsByUserListItem.css';
 
-const UserPostListItem = (props) => (
+const PostsByUserListItem = (props) => (
     <div className="postDetails">
         <span><h1>{props.postItem.posted_by}</h1></span>    
         <span>{props.postItem.post_id}</span>
@@ -13,4 +13,4 @@ const UserPostListItem = (props) => (
 );
 
 
-export default UserPostListItem;
+export default PostsByUserListItem;

@@ -1,13 +1,13 @@
 import React from 'react';
 import './PostsByUserList.css';
-import UserPostListItem from './UserPostListItem/UserPostListItem';
+import PostsByUserListItem from './PostsByUserListItem/PostsByUserListItem';
 
 const Posts = (props) => {
     return (
         <div className="Wrapper">
             {
                 props.items && props.items.map(post => {
-                    return <UserPostListItem postItem={post} />;
+                    return <PostsByUserListItem postItem={post} />;
                 })
             }
         </div>
