@@ -1,6 +1,6 @@
 import React from 'react';
 import './PostsListItem.css';
-import { UpdateVote } from '../../../../state/actions/votes.actions';
+import UpdateVote from '../../../../state/actions/votes.actions';
 import store from '../../../../state/store';
 
 const vote = (postid, userid, voteid ) => {
