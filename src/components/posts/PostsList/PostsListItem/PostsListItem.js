@@ -8,6 +8,7 @@ const PostsListItem = (props) => (
         <div className="ImageSize"><img src={props.post.URL}/></div>
         <span><h1>Description</h1></span>
         <span>{props.post.post_description}</span>
+        <span>{props.post.vote_id ? <h1>You vote</h1> : <h1>You didn't vote</h1> }</span>
         <div><h1>Number of votes</h1><span>{props.post.Vote_count}</span></div>
     </div>
 );
