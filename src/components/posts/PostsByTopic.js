@@ -7,7 +7,7 @@ import { getPostByTopic } from '../../state/actions/posts.actions';
 
 class PostsByTopic extends Component {
     componentWillMount() {
-        store.dispatch(getPostByTopic(this.props.topicId, 1));
+        store.dispatch(getPostByTopic(2, 1));
     }
 
     render() {
