@@ -8,7 +8,9 @@ class PostsByUserListItem extends Component {
     constructor(props){
         super(props);
 
-        this.state = { isVote: false };
+        this.state = {
+            isVote: false 
+        };
         this.vote = this.vote.bind(this);
     }
 
@@ -18,6 +20,7 @@ class PostsByUserListItem extends Component {
 
     vote = () => {
         store.dispatch(AddVote({postid:this.props.postItem.post_id, userid: 5 }));
+        
         this.setState({
             isVote: !this.state.isVote
         });
