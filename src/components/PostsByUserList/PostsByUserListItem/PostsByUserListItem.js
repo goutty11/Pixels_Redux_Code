@@ -36,7 +36,6 @@ class PostsByUserListItem extends Component {
                 {this.state.isVote ? <p>you voted</p>: <p>Didn't vote</p> }
                 <span><h1>Description</h1></span>
                 <span>{this.props.postItem.post_description}</span>
-                <div><h1>Number of votes</h1><span>{this.props.postItem.vote_count}</span></div> 
             </div>
         );
     }
