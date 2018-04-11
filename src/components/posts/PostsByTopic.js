@@ -1,14 +1,15 @@
 import React, { Component } from 'react';
 import store from '../../state/store';
-import PostsList from '../PostsList/PostsList';
+import PostsList from './PostsList/PostsList';
 import { connect } from 'react-redux';
 
 import { getPostByTopic } from '../../state/actions/posts.actions';
 
 class PostsByTopic extends Component {
-    componenWillMount() {
-        store.dispatch(getPostByTopic(1));
+    componentWillMount() {
+        store.dispatch(getPostByTopic(this.props.topicId));
     }
+
     render() {
         return (
             <div>

@@ -7,16 +7,19 @@ import {
 
 
 
-export const AddVote = ({postid, userid}) => {
+export const UpdateVote = (postId, userId) => {
     return {
         type: POST_ADD_VOTE,
-        payload: axios.post(`${PIXELS_API_URL}/add_vote/${postid}/${userid}`)
+        payload: axios.post(`${PIXELS_API_URL}/update_vote`, {
+            postId,
+            userId
+        })
     }
 };
 
-export const getVoteCount = ({postid}) => {
-    return {
-        type: GET_VOTE_COUNT,
-        payload: axios.post(`${PIXELS_API_URL}/get_vote_count/${postid}`)
-    }
-};
+// export const getVoteCount = ({postid}) => {
+//     return {
+//         type: GET_VOTE_COUNT,
+//         payload: axios.post(`${PIXELS_API_URL}/get_vote_count/${postid}`)
+//     }
+// };

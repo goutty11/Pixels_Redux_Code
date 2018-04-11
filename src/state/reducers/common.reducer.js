@@ -8,7 +8,7 @@ const initialInformationState = {
     fetching: false,
     fetched: false,
     error: null,
-    initialInformation: []
+    data: []
 };
 
 export const initialInfo = (state = initialInformationState, action) => {

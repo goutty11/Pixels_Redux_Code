@@ -7,21 +7,14 @@ import {
     GET_POSTS_BY_USER_REJECTED
 } from '../../common/constants';
 
-const postsByTopicInitialState = {
+const postsByInitialState = {
     fetching: false,
     fetched: false,
     error: null,
     posts: []
 };
 
-const postsByUserInitialState = {
-    fetching: false,
-    fetched: false,
-    error: null,
-    Userposts: []
-};
-
-export const postsByTopic = (state = postsByTopicInitialState, action) => {
+export const postsByTopic = (state = postsByInitialState, action) => {
     switch (action.type) {
         case GET_POSTS_BY_TOPIC_PENDING:
             return { ...state, fetching: true };
@@ -34,12 +27,12 @@ export const postsByTopic = (state = postsByTopicInitialState, action) => {
     }
 };
 
-export const postsByUser = (state = postsByUserInitialState, action) => {
+export const postsByUser = (state = postsByInitialState, action) => {
     switch (action.type) {
         case GET_POSTS_BY_USER_PENDING:
             return { ...state, fetching: true};
         case GET_POSTS_BY_USER_FULFILLED:
-            return { ...state, fetching: false, Userposts: action.payload.data.items };
+            return { ...state, fetching: false, posts: action.payload.data.items };
         case GET_POSTS_BY_USER_REJECTED:
             return { ...state, fetching: false, error: action.payload.data.error };
         default:
