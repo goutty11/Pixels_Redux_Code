@@ -17,3 +17,9 @@
     width: 65%;
     height: 40%;
 }
+
+.post > .voted {
+    border-style: solid;
+    border-width: 1px;
+    background-color: lightgreen;
+}
