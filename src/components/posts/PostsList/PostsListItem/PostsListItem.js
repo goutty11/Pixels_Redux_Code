@@ -16,7 +16,7 @@ const PostsListItem = (props) => (
         <span>{props.post.post_description}</span>
         <span>{ props.post.vote_id 
                     ? <h1 className="voted">You voted</h1> 
-                    : <button onClick={this.vote(props.post.post_id, 1, props.post.vote_id)}>vote now</button>
+                    : <button onClick={vote(props.post.post_id, 1, props.post.vote_id)}>vote now</button>
                }
         </span>
         <div><p>#votes</p><span>{props.post.Vote_count}</span></div>
