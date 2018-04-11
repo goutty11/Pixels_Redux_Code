@@ -9,7 +9,7 @@ class PostsByUserListItem extends Component {
         super(props);
 
         this.state = { isVote: false };
-        this.votehere = this.votehere.bind(this);
+        this.vote = this.vote.bind(this);
     }
 
     componentWillMount () {
