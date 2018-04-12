@@ -1,20 +1,20 @@
 import React, { Component } from 'react';
-import './UserDetails.css';
+import store from '../../state/store';
+import { connect } from 'react-redux';
+
 
 class User extends Component {
-    constructor(props){
-        super(props);
-    }
     render() {
         return (
             <div>
-                {this.props.userinformation.first_name}
+                {this.props.initialInfo.data.currentTopic.topic_id}
             </div>
         );
     }
 }
 
-export default User;
+const mapStateToProps = (state) => state;
+export default connect(mapStateToProps)(User);
 
 
 

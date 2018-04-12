@@ -20,7 +20,7 @@ class App extends React.Component {
             <div className="App">
                 { /*<PostsByUser userId={1} /> */}
                 { /* <PostsByTopic details={this.props.initialInfo.data[0]} />  */}
-                <User userinformation={this.props.initialInfo.loggedInUserDetails} />
+                <User/>
             </div>
         );
     }
