@@ -19,7 +19,7 @@ class App extends React.Component {
         return (
             <div className="App">
                 { /*<PostsByUser userId={1} /> */}
-                <PostsByTopic details={this.props.initialInfo.data} />  
+                <PostsByTopic details={this.props.initialInfo.data[0]} />  
                 {/* <UserDetails details={this.props.PostsByTopic} /> */}
             </div>
         );
