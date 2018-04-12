@@ -1,7 +1,7 @@
 import React from 'react';
 import './UserDetails.css';
 
-const UserDetails = (props) => {
+const User = (props) => {
     return (
         <div className="Details">
             {props.userinformation.first_name}
@@ -10,4 +10,4 @@ const UserDetails = (props) => {
 };
 
 
-export default UserDetails;
+export default User;
