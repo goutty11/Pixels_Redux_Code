@@ -28,7 +28,7 @@ class PostsListItem extends Component {
     }
 
     vote = (postid, userid, voteid) => {
-        store.dispatch(UpdateVote(postid, userid, voteid));
+        store.dispatch(UpdateVote(this.props.post.postid, this.props.post.userid, this.props.post.voteid));
     };
 
     render() {
@@ -41,7 +41,7 @@ class PostsListItem extends Component {
                 <span>{this.props.post.post_description}</span>
                 <span>{ this.props.post.vote_id 
                             ? <h1 className="voted">You voted{this.props.post.vote_id}</h1> 
-                            : <button onClick={this.vote(this.props.post.post_id, this.props.post.user_id, this.props.post.vote_id)}>vote now</button>
+                            : <button onClick={this.vote}>vote now</button>
                         }
                 </span>
                 <div><p>#votes</p><span>{this.props.post.Vote_count}</span></div>
