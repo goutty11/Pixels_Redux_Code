@@ -5,7 +5,7 @@ import './App.css';
 
 import PostsByUser from "..//posts/PostsByUser";
 import PostsByTopic from '../posts/PostsByTopic';
-import UserDetails from "../UserDetails/UserDetails";
+import UserDetails from '../UserDetails/UserDetails';
 
 import store from '../../state/store';
 import { getInitialInfo } from '../../state/actions/common.actions';

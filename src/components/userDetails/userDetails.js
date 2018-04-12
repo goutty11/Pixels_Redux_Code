@@ -1,4 +1,5 @@
 import React from 'react';
+import './UserDetails.css';
 
 const UserDetails = (props) => {
     return (
