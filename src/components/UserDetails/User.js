@@ -7,7 +7,7 @@ class User extends Component {
     render() {
         return (
             <div>
-                {this.props.initialInfo.data.currentTopic.topic_id}
+                {this.props.initialInfo.data.loggedInUserDetails.mail_id}
             </div>
         );
     }
