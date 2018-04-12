@@ -1,9 +1,7 @@
 import React, { Component } from 'react';
 import './UserDetails.css';
 
-
-
-class UserDetails extends Component {
+class User extends Component {
     constructor(props){
         super(props);
     }
@@ -16,7 +14,7 @@ class UserDetails extends Component {
     }
 }
 
-export default UserDetails;
+export default User;
 
 
 
