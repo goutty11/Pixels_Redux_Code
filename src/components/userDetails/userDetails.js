@@ -1,6 +1,6 @@
 import React from 'react';
 
-const userDetails = (props) => {
+const UserDetails = (props) => {
     return (
         <div className="Details">
             {props.details.first_name}
@@ -9,4 +9,4 @@ const userDetails = (props) => {
 };
 
 
-export default userDetails;
+export default SserDetails;
