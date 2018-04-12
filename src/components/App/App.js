@@ -20,8 +20,8 @@ class App extends React.Component {
             <div className="App">
                 
                 { /* <PostsByUser userId={this.props.initialInfo.data.loggedInUserDetails.currentTopic.topic_id} /> */}
-                { /* <PostsByTopic topicdetails={this.props.initialInfo.data.currentTopic} /> */ }
-                <UserDetails details={this.props.initialInfo.data.loggedInUserDetails} />
+                 <PostsByTopic topicdetails={1} /> 
+                { /* <UserDetails details={this.props.initialInfo.data.loggedInUserDetails} /> */ }
             </div>
         );
     }
