@@ -9,4 +9,4 @@ const UserDetails = (props) => {
 };
 
 
-export default SserDetails;
+export default UserDetails;
