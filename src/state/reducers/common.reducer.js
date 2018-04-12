@@ -8,7 +8,7 @@ const initialInformationState = {
     fetching: false,
     fetched: false,
     error: null,
-    data: []
+    data: {}
 };
 
 export const initialInfo = (state = initialInformationState, action) => {
@@ -16,7 +16,7 @@ export const initialInfo = (state = initialInformationState, action) => {
         case GET_INITIAL_INFO_PENDING:
             return { ...state, fetching: true };
         case GET_INITIAL_INFO_FULFILLED:
-            return { ...state, fetching: false, data: action.payload.data };
+            return { ...state, fetching: false, data: action.payload.data.currentTopic };
         case GET_INITIAL_INFO_REJECTED:
             return { ...state, fetching: false, error: action.payload.error };
         default:
