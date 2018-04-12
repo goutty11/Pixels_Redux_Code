@@ -9,6 +9,6 @@ import User from './components/UserDetails/User';
 
 ReactDOM.render(
     <Provider store={store}>
-        <User />
+        <App />
     </Provider>,
 document.getElementById('root'));
