@@ -5,7 +5,7 @@ import './App.css';
 
 import PostsByUser from "..//posts/PostsByUser";
 import PostsByTopic from '../posts/PostsByTopic';
-//import User from '../UserDetails/User';
+import UserDetails from '../UserDetails/UserDetails';
 
 import store from '../../state/store';
 import { getInitialInfo } from '../../state/actions/common.actions';
@@ -20,8 +20,8 @@ class App extends React.Component {
             <div className="App">
                 
                 { /* <PostsByUser userId={this.props.initialInfo.data.loggedInUserDetails.currentTopic.topic_id} /> */}
-                <PostsByTopic topicdetails={this.props.initialInfo.data.currentTopic} /> 
-                { /* <User/> */ }
+                { /* <PostsByTopic topicdetails={this.props.initialInfo.data.currentTopic} /> */ }
+                <UserDetails details={this.props.initialInfo.data.loggedInUserDetails} />
             </div>
         );
     }
