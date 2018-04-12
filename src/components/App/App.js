@@ -18,7 +18,7 @@ class App extends React.Component {
     render() {
         return (
             <div className="App">
-                <PostsByUser userId={1} /> 
+                <PostsByUser userId={this.props.initialInfo.data.currentTopic.topic_id} /> 
                 { /* <PostsByUser userId={this.props.initialInfo.data.loggedInUserDetails.currentTopic.topic_id} /> */}
                 { /* <PostsByTopic details={this.props.initialInfo.data[0]} />  */}
                 { /* <User/> */ }
