@@ -28,7 +28,11 @@ class PostsListItem extends Component {
     }
 
     vote = (postid, userid, voteid) => {
-        store.dispatch(UpdateVote(this.props.post.postid, this.props.post.userid, this.props.post.voteid));
+        store.dispatch(UpdateVote(
+                this.props.post.postid, 
+                this.props.post.userid,
+                this.props.post.voteid
+            ));
     };
 
     render() {
@@ -39,10 +43,12 @@ class PostsListItem extends Component {
                 <div className="ImageSize"><img src={this.props.post.URL}/></div>
                 <span><h1>Description</h1></span>
                 <span>{this.props.post.post_description}</span>
-                <span>{ this.props.post.vote_id 
+                <span>
+                    {
+                        this.props.post.vote_id 
                             ? <h1 className="voted" onClick={this.vote}>You voted</h1> 
                             : <button onClick={this.vote}>vote now</button>
-                        }
+                    }
                 </span>
                 <div><p>#votes</p><span>{this.props.post.Vote_count}</span></div>
             </div>

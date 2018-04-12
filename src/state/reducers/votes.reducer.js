@@ -12,7 +12,7 @@ const voteResponseDefaultState = {
     response: ''
 };
 
-export const addVote = (state = voteResponseDefaultState, action) => {
+export const updateVote = (state = voteResponseDefaultState, action) => {
     switch (action.type) {
         case POST_ADD_VOTE_PENDING:
             return { ...state, fetching: true };
