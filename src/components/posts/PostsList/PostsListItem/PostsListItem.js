@@ -40,7 +40,7 @@ class PostsListItem extends Component {
                 <span><h1>Description</h1></span>
                 <span>{this.props.post.post_description}</span>
                 <span>{ this.props.post.vote_id 
-                            ? <h1 className="voted">You voted{this.props.post.vote_id}</h1> 
+                            ? <h1 className="voted" onClick={this.vote}>You voted</h1> 
                             : <button onClick={this.vote}>vote now</button>
                         }
                 </span>
