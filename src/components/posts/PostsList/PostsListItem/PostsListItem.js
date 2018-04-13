@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './PostsListItem.css';
 
-import { UpdateVote } from '../../../../state/actions/votes.actions';
+import { updateVote } from '../../../../state/actions/votes.actions';
 import store from '../../../../state/store';
 
 
@@ -28,7 +28,7 @@ class PostsListItem extends Component {
     }
 
     vote = (postid, userid, voteid) => {
-        store.dispatch(UpdateVote(
+        store.dispatch(updateVote(
                 this.props.post.postid, 
                 this.props.post.userid,
                 this.props.post.voteid

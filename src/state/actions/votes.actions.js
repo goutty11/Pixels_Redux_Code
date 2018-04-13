@@ -7,13 +7,13 @@ import {
 
 
 
-export const UpdateVote = (postId, userId, voteId) => {
+export const updateVote = (postId, userId, voteId) => {
     return {
         type: PUT_UPDATE_VOTE,
         payload: axios.put(`${PIXELS_API_URL}/update_vote`, {
-            postId,
-            userId,
-            voteId
+            postId: postId,
+            userId: userId,
+            voteId: voteId
         })
     }
 };
