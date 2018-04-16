@@ -7,7 +7,17 @@ import { getPostByUser } from '../../state/actions/posts.actions';
 
 class PostsByUser extends Component {
     componentWillMount() {
-        store.dispatch(getPostByUser(this.props.userId));
+        this.updatePostsByUser();
+    }
+
+    componentWillReceiveProps(nextProps) {
+        if (this.props.userId != nextProps.userId) {
+                this.updatePostsByUser();
+            } 
+    }
+
+    updatePostsByUser() {
+        store.dispatch(store.dispatch(getPostByUser(this.props.userId)));
     }
     
     render() {

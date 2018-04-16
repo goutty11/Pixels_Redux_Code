@@ -11,19 +11,35 @@ import store from '../../state/store';
 import { getInitialInfo } from '../../state/actions/common.actions';
 
 class App extends React.Component {
+    constructor(props) {
+        super(props);
+        
+        // TODO: remove hardcoding by getting userId from the login screen
+        this.loggedInUserId = 1;
+    }
+
     componentWillMount() {
-        store.dispatch(getInitialInfo(1));
+        store.dispatch(getInitialInfo(this.loggedInUserId));
     }
 
     render() {
-        return (
-            <div className="App">
-                
-                 {/* <PostsByUser userId={1} /> */}
-                  <PostsByTopic topicdetails={1} />
-                { /* <UserDetails details={this.props.initialInfo.data.loggedInUserDetails} /> */ }
-            </div>
-        );
+        if (this.props &&
+            this.props.initialInfo &&
+            this.props.initialInfo.data &&
+            this.props.initialInfo.data.currentTopic &&
+            this.props.initialInfo.data.currentTopic.topic_id && 
+            this.loggedInUserId) {
+
+            return (
+                <div className="App">
+                    {/* <PostsByUser userId={1} /> */}
+                    <PostsByTopic topicId={this.props.initialInfo.data.currentTopic.topic_id} userId={this.loggedInUserId}/>
+                    { /* <UserDetails details={this.props.initialInfo.data.loggedInUserDetails} /> */ }
+                </div>
+            );
+        } else {
+            return (<div />);
+        }
     }
 }
 

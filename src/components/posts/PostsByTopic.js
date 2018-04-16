@@ -7,7 +7,18 @@ import { getPostByTopic } from '../../state/actions/posts.actions';
 
 class PostsByTopic extends Component {
     componentWillMount() {
-        store.dispatch(getPostByTopic(1, 1));
+        this.updatePostsByTopic();
+    }
+
+    componentWillReceiveProps(nextProps) {
+        if (this.props.topicId != nextProps.topicId ||
+            this.props.userId != nextProps.userId) {
+                this.updatePostsByTopic();
+            } 
+    }
+
+    updatePostsByTopic() {
+        store.dispatch(getPostByTopic(this.props.topicId, this.props.userId));
     }
 
     render() {

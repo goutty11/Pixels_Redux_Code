@@ -11,9 +11,9 @@ export const updateVote = (postId, userId, voteId) => {
     return {
         type: PUT_UPDATE_VOTE,
         payload: axios.put(`${PIXELS_API_URL}/update_vote`, {
-            postId: postId,
-            userId: userId,
-            voteId: voteId
+            postId,
+            userId,
+            voteId
         })
     }
 };
