@@ -4,8 +4,6 @@ import './PostsListItem.css';
 import { updateVote } from '../../../../state/actions/votes.actions';
 import store from '../../../../state/store';
 
-
-
 // const PostsListItem = (props) => (
 //     <div className="post">
 //         <span><h1>{props.post.Posted_by}</h1></span>    
