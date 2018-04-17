@@ -6,19 +6,23 @@ import { updateUser } from '../../../state/actions/users.actions';
 class UserDetailsListItem extends Component {
     constructor(props){
         super(props);
+        
+        this.state = {
+            userId: 1
+        };
 
         this.editDetails = this.editDetails.bind(this);
     }
 
     editDetails = () => {
         store.dispatch(updateUser(
-                        1, 
+                        this.state.userId, 
                         this.props.first_name,
                         this.props.last_name,
                         this.props.mail_id
                     ));
     };
-    
+
     render() {
         return (
             <div className="userProfile">
