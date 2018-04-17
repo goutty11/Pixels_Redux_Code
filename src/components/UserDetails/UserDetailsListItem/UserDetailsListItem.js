@@ -66,7 +66,7 @@ class UserDetailsListItem extends Component {
                      />
                 </div>
                 <div>
-                    {this.state.postCount}
+                    Total number of posts: {this.state.postCount}
                 </div>
                 
                 <button onClick={this.editDetails}>Save</button>
