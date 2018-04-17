@@ -9,7 +9,9 @@ class UserDetailsListItem extends Component {
         
         this.state = {
             userId: 1,
-            firstName: 'Mano'
+            firstName: this.props.userDetails.first_name,
+            lastName: this.props.userDetails.first_name,
+            mailId : this.props.userDetails.mail_id
         };
 
         this.editDetails = this.editDetails.bind(this);
@@ -27,9 +29,9 @@ class UserDetailsListItem extends Component {
     render() {
         return (
             <div className="userProfile">
-                <div>{this.props.userDetails.first_name}</div>
-                <div>{this.props.userDetails.last_name}</div>
-                <div>{this.props.userDetails.mail_id}</div>
+                <div>{this.state.firstName}</div>
+                <div>{this.state.lastName}</div>
+                <div>{this.state.mailId}</div>
                 
                 <button onClick={this.editDetails}>Save</button>
             </div>
