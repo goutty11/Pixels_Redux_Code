@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
-import './UserDetailsListItem.css';
+import './UserProfileList.css';
 import store from '../../../state/store';
 import { updateUser } from '../../../state/actions/users.actions';
 
-class UserDetailsListItem extends Component {
+class UserProfileList extends Component {
     constructor(props){
         super(props);
         
@@ -76,4 +76,4 @@ class UserDetailsListItem extends Component {
     }
 }
 
-export default UserDetailsListItem;
+export default UserProfileList;
