@@ -21,6 +21,7 @@ class UserDetailsListItem extends Component {
         };
 
         this.editDetails = this.editDetails.bind(this);
+        this.Cancel = this.Cancel.bind(this);
     }
 
     editDetails = () => {
@@ -35,6 +36,14 @@ class UserDetailsListItem extends Component {
     onHandleChange = (name, e) => {
         this.setState({
             [name]: e.target.value
+        });
+    }
+
+    Cancel = (prevState) => {
+        this.setState({
+            firstName: prevState.firstName,
+            lastName: prevState.lastName,
+            mailId: prevState.mailId
         });
     }
 
@@ -57,6 +66,7 @@ class UserDetailsListItem extends Component {
                 </div>
                 
                 <button onClick={this.editDetails}>Save</button>
+                <button onClick={this.Cancel}>Cancel</button>
             </div>
         );
     }
