@@ -18,7 +18,7 @@ class UserProfileList extends Component {
             firstName: this.props.userDetails.first_name,
             lastName: this.props.userDetails.last_name,
             mailId : this.props.userDetails.mail_id,
-            postCount: this.props.userDetails.total_no_of_posts
+            postCount: this.props.userDetails.no_of_posts
         };
 
         this.editDetails = this.editDetails.bind(this);
