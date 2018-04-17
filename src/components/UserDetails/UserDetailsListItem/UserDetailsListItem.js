@@ -8,7 +8,8 @@ class UserDetailsListItem extends Component {
         super(props);
         
         this.state = {
-            userId: 1
+            userId: 1,
+            firstName: Manoj
         };
 
         this.editDetails = this.editDetails.bind(this);
@@ -17,7 +18,7 @@ class UserDetailsListItem extends Component {
     editDetails = () => {
         store.dispatch(updateUser(
                         this.state.userId, 
-                        this.props.first_name,
+                        this.state.first_name,
                         this.props.last_name,
                         this.props.mail_id
                     ));
