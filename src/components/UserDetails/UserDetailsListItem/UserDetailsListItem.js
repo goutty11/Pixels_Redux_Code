@@ -50,8 +50,8 @@ class UserDetailsListItem extends Component {
     render() {
         return (
             <div className="user_profile">
-                <div className="first_name">
-                    <input type="text" value={this.state.firstName} 
+                <div>
+                    <input type="text" className="first_name" value={this.state.firstName} 
                         onChange={this.onChange.firstName}
                     />
                 </div>
