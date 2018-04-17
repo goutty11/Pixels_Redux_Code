@@ -9,7 +9,7 @@ class UserDetailsListItem extends Component {
         
         this.state = {
             userId: 1,
-            firstName: 'Manoj'
+            firstName: 'Mano'
         };
 
         this.editDetails = this.editDetails.bind(this);
