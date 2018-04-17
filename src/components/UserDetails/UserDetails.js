@@ -1,13 +1,10 @@
-import React, { Component } from 'react';
+import React from 'react';
+import UserDetailsListItem from './UserDetailsListItem/UserDetailsListItem';
 
-class UserDetails extends Component {
-    render() {
-        return (
-            <div>
-                {this.props.details.mail_id}
-            </div>
-        );
-    }
-}
+const UserDetails = () => (
+        <div>
+            <UserDetailsListItem userDetails = {this.props.UserDetails} />
+        </div>
+);
 
 export default UserDetails;
