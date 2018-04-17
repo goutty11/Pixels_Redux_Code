@@ -1,6 +1,6 @@
 .userProfile {
     width: 70%;
-    height: 450px;
+    height: 30%;
     margin: 10%;
     border-style: solid;
     border-width: 1px;
@@ -8,6 +8,7 @@
 
 .firstName {
     width: 10%;
+    height:30%;
     margin: 3%;
     border-radius: 10px;
     border-style: solid;
@@ -16,6 +17,7 @@
 
 .lastName {
     width: 10%;
+    height:30%;
     margin: 3%;
     border-radius: 10px;
     border-style: solid;
@@ -24,6 +26,7 @@
 
 .mailId {
     width: 10%;
+    height:30%;
     margin: 3%;
     border-radius: 10px;
     border-style: solid;
