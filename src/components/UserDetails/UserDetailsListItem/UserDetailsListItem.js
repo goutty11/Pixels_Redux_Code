@@ -20,7 +20,7 @@ class UserDetailsListItem extends Component {
                         this.state.userId, 
                         this.state.firstName,
                         this.props.userDetails.last_name,
-                        this.props.userDetails.first_name
+                        this.props.userDetails.mail_id
                     ));
     };
 
