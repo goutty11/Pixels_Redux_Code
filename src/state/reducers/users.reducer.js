@@ -3,8 +3,6 @@ import {
     UPDATE_USER_FULFILLED,
     UPDATE_USER_REJECTED
 } from '../../common/constants';
-import { updateUser } from '../actions/users.actions';
-
 
 const userDetailsDefaultState = {
     fetching: false,
