@@ -1,15 +1,33 @@
 import React, { Component } from 'react';
+import './UserDetailsListItem.css';
+import store from '../../../state/store';
+import { updateUser } from '../../../state/actions/users.actions';
 
 class UserDetailsListItem extends Component {
     constructor(props){
         super(props);
+
+        this.editDetails = this.editDetails.bind(this);
     }
+
+    editDetails = () => {
+        store.dispatch(updateUser(
+                        1, 
+                        this.props.first_name,
+                        this.props.last_name,
+                        this.props.mail_id
+                    ));
+    };
+    
     render() {
         return (
-            <div>
+            <div className="userProfile">
+                <div>{this.props.userDetails.first_name}</div>
+                <div>{this.props.userDetails.last_name}</div>
                 <div>{this.props.userDetails.mail_id}</div>
+                
+                <button onClick={this.editDetails}>Save</button>
             </div>
-
         );
     }
 }
