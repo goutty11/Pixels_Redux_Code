@@ -10,6 +10,7 @@ class UserDetailsListItem extends Component {
         this.onChange = {
             firstName: this.onHandleChange.bind(this, 'firstName'),
             lastName: this.onHandleChange.bind(this, 'lastName'),
+            mailId: this.onHandleChange.bind(this, 'mailId')
         }
 
         this.state = {
@@ -50,8 +51,10 @@ class UserDetailsListItem extends Component {
                         onChange={this.onChange.lastName}
                     />
                 </div>
-                <div>{this.state.lastName}</div>
-                <div>{this.state.mailId}</div>
+                <div><input type="text" value={this.state.mailId} 
+                        onChange={this.onChange.mailId}
+                     />
+                </div>
                 
                 <button onClick={this.editDetails}>Save</button>
             </div>
