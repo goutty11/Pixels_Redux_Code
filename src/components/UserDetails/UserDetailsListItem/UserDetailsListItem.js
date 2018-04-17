@@ -10,7 +10,7 @@ class UserDetailsListItem extends Component {
         this.state = {
             userId: 1,
             firstName: this.props.userDetails.first_name,
-            lastName: this.props.userDetails.first_name,
+            lastName: this.props.userDetails.last_name,
             mailId : this.props.userDetails.mail_id
         };
 
@@ -26,10 +26,19 @@ class UserDetailsListItem extends Component {
                     ));
     };
 
+    onHandleChange = (e) => {
+        this.setState({
+            firstName: e.target.value
+        });
+    }
+
     render() {
         return (
             <div className="userProfile">
-                <div>{this.state.firstName}</div>
+                <div><input type="text" value={this.state.firstName} 
+                        onChange={(e) => {this.onHandleChange(e)}}
+                      />
+                </div>
                 <div>{this.state.lastName}</div>
                 <div>{this.state.mailId}</div>
                 
