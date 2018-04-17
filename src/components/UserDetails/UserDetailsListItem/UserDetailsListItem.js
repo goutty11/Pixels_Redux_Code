@@ -27,8 +27,8 @@ class UserDetailsListItem extends Component {
         store.dispatch(updateUser(
                         this.state.userId, 
                         this.state.firstName,
-                        this.props.userDetails.last_name,
-                        this.props.userDetails.mail_id
+                        this.state.lastName,
+                        this.state.mailId
                     ));
     };
 
