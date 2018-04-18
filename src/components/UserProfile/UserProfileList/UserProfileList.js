@@ -22,7 +22,6 @@ class UserProfileList extends Component {
         };
 
         this.editDetails = this.editDetails.bind(this);
-        this.Cancel = this.Cancel.bind(this);
     }
 
     editDetails = () => {
