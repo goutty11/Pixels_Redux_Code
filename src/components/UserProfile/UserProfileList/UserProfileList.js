@@ -69,7 +69,7 @@ class UserProfileList extends Component {
                      </span>
                 </div>
                 
-                <button onClick={this.editDetails}>Save</button>
+                <button className="save" onClick={this.editDetails}>Save</button>
             </div>
         );
     }
