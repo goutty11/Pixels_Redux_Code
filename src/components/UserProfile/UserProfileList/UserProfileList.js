@@ -31,20 +31,12 @@ class UserProfileList extends Component {
                         this.state.firstName,
                         this.state.lastName,
                         this.state.mailId
-                    ));
+                      ));
     };
 
     onHandleChange = (name, e) => {
         this.setState({
             [name]: e.target.value
-        });
-    }
-
-    Cancel = (prevState) => {
-        this.setState({
-            firstName: prevState.firstName,
-            lastName: prevState.lastName,
-            mailId: prevState.mailId
         });
     }
 
@@ -61,16 +53,16 @@ class UserProfileList extends Component {
                         onChange={this.onChange.lastName}
                     />
                 </div>
-                <div><input type="text" className="mailId" value={this.state.mailId} 
+                <div>
+                    <input type="text" className="mailId" value={this.state.mailId} 
                         onChange={this.onChange.mailId}
-                     />
+                    />
                 </div>
                 <div>
                     Total number of posts: {this.state.postCount}
                 </div>
                 
                 <button onClick={this.editDetails}>Save</button>
-                <button onClick={this.Cancel}>Cancel</button>
             </div>
         );
     }
