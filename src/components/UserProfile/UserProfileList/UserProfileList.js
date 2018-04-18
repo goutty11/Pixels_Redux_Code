@@ -18,6 +18,7 @@ class UserProfileList extends Component {
             firstName: this.props.userDetails.first_name,
             lastName: this.props.userDetails.last_name,
             mailId : this.props.userDetails.mail_id,
+            profilePic: this.props.userDetails.profile_pic,
             postCount: this.props.userDetails.no_of_posts
         };
 
@@ -43,7 +44,7 @@ class UserProfileList extends Component {
         return (
             <div className="userInfo">
                 <div className="userName">
-                    
+                        
                         <input type="text" className="firstName" value={this.state.firstName} 
                             onChange={this.onChange.firstName}
                         />
@@ -61,6 +62,9 @@ class UserProfileList extends Component {
                             onChange={this.onChange.mailId}
                         />
                     </span>
+                </div>
+                <div>
+                    <img src={this.state.profilePic}/>
                 </div>
                 <div className="totalPosts">
                     <span>Total number of posts:</span>
