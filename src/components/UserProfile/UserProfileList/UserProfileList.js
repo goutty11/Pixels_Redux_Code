@@ -63,7 +63,7 @@ class UserProfileList extends Component {
                         />
                     </span>
                 </div>
-                <div>
+                <div className="profilePicture">
                     <img src={this.state.profilePic}/>
                 </div>
                 <div className="totalPosts">

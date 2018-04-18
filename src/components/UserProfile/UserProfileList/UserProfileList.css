@@ -80,6 +80,10 @@
     font-family: sans-serif;
 }
 
+.userInfo > .userEmail > .profilePicture {
+    width: 30%;
+    height:70%;
+}
 
 .userInfo > .totalPosts {
     margin: 5px 25px 5px 25px;
