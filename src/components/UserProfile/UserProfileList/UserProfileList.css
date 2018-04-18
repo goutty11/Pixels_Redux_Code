@@ -26,6 +26,7 @@
 
 .userInfo > .userName {
     display: flex;
+    width: 85%;
 }
 
 .userInfo > .firstName {

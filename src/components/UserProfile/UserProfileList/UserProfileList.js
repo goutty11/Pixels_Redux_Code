@@ -57,7 +57,7 @@ class UserProfileList extends Component {
                 <div className="userEmail">
                     <span>Mail Id</span>
                     <span>
-                        <input type="text" className="mailId" value={this.state.mailId} 
+                        <input type="text" value={this.state.mailId} 
                             onChange={this.onChange.mailId}
                         />
                     </span>
