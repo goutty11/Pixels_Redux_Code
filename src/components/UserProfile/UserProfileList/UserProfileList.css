@@ -24,6 +24,10 @@
     font-family: sans-serif;
 }
 
+.userInfo > .userName {
+    display: flex;
+}
+
 .userInfo > .firstName {
     margin: 3px 25px 5px 25px;
     /* border-style: solid;

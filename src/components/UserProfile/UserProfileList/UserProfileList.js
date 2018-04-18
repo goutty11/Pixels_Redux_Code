@@ -42,20 +42,25 @@ class UserProfileList extends Component {
     render() {
         return (
             <div className="userInfo">
-                <div className="firstName">
-                    <input type="text" className="firstName" value={this.state.firstName} 
-                        onChange={this.onChange.firstName}
-                    />
-                </div>
-                <div className="lastName">
-                    <input type="text" className="lastName" value={this.state.lastName} 
-                        onChange={this.onChange.lastName}
-                    />
+                <div className="userName">
+                    <div className="firstName">
+                        <input type="text" value={this.state.firstName} 
+                            onChange={this.onChange.firstName}
+                        />
+                    </div>
+                    <div className="lastName">
+                        <input type="text" value={this.state.lastName} 
+                            onChange={this.onChange.lastName}
+                        />
+                    </div>
                 </div>
                 <div className="userEmail">
-                    <input type="text" className="mailId" value={this.state.mailId} 
-                        onChange={this.onChange.mailId}
-                    />
+                    <span>Mail Id</span>
+                    <span>
+                        <input type="text" className="mailId" value={this.state.mailId} 
+                            onChange={this.onChange.mailId}
+                        />
+                    </span>
                 </div>
                 <div className="totalPosts">
                     <span>Total number of posts:</span>
