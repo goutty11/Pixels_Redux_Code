@@ -43,16 +43,16 @@ class UserProfileList extends Component {
         return (
             <div className="userInfo">
                 <div className="userName">
-                    <div className="firstName">
-                        <input type="text" value={this.state.firstName} 
+                    
+                        <input type="text" className="firstName" value={this.state.firstName} 
                             onChange={this.onChange.firstName}
                         />
-                    </div>
-                    <div className="lastName">
-                        <input type="text" value={this.state.lastName} 
+                    
+                    
+                        <input type="text" className="lastName" value={this.state.lastName} 
                             onChange={this.onChange.lastName}
                         />
-                    </div>
+                    
                 </div>
                 <div className="userEmail">
                     <span>Mail Id</span>
