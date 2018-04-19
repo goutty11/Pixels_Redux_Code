@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import ViewBestPostListItem from './ViewBestPostListItem';
 
 class ViewBestPostList extends Component {
     constructor(props){
@@ -7,7 +8,11 @@ class ViewBestPostList extends Component {
     render() {
         return (
             <div>
-                {this.props.postDetails.post_id}
+                {
+                    this.props.postDetails && this.props.postDetails.map(post => {
+                    return <ViewBestPostListItem key={post.post_id}  postlistDetails={post} />
+                   })
+                }
             </div>
         );
     }
