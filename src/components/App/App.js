@@ -65,13 +65,15 @@ class App extends Component {
         return (
             <BrowserRouter>
                 <div>
-                    <Header/>
-                </div>
-                <div>
-                    <Switch>
-                        <Route exact path="/" component={LandingPage}/>
-                        <Route path="/sample" component={UserProfile}/>
-                    </Switch>
+                    <div>
+                        <Header/>
+                    </div>
+                    <div>
+                        <Switch>
+                            <Route exact path="/" component={LandingPage}/>
+                            <Route path="/sample" component={UserProfile}/>
+                        </Switch>
+                    </div>
                 </div>
             </BrowserRouter>
         );
