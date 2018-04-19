@@ -10,8 +10,8 @@ class BestPostList extends Component {
             <div>
                 {
                     this.props.postDetails && this.props.postDetails.map(post => {
-                     return <BestPostListItem key={post.post_id}  postlistDetails={post} />
-                   })
+                        return <BestPostListItem key={post.post_id}  postlistDetails={post} />
+                    })
                 }
             </div>
         );
