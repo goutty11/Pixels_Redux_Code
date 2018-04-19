@@ -9,9 +9,16 @@ class ViewBestPost extends Component {
         store.dispatch(getBestPost());
     }
     render() {
+        if (this.props &&
+            this.props.bestPost.post &&
+            this.props.bestPost.post.post_id &&
+            this.props.bestPost.post.first_name &&
+            this.props.bestPost.post.topic_id && 
+            this.props.bestPost.post.url) 
+        {
         return (
             <div>
-                <ViewBestPostList postDetails={this.props.bestPost}/>
+                <ViewBestPostList postDetails={this.props.bestPost.data.result}/>
             </div>
         );
     }
