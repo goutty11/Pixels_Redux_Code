@@ -3,7 +3,8 @@ import {
     PIXELS_API_URL,
     GET_POSTS_BY_TOPIC,
     GET_POSTS_BY_USER,
-    GET_POST
+    GET_POST,
+    GET_BEST_POST
 } from '../../common/constants';
 
 
@@ -33,6 +34,6 @@ export const getPost = (postId, loggedInUserId) => {
 export const getBestPost = () => {
     return {
         type: GET_BEST_POST,
-        payload: axios.get(`${PIXELS_API_URL}/get_post/${postId}/${loggedInUserId}`)
+        payload: axios.get(`${PIXELS_API_URL}/get_best_post_details`)
     }
 }
