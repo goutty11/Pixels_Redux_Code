@@ -1,8 +1,8 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import PostsByTopic from '../posts/PostsByTopic';
 import store from '../../state/store';
-import { getInitialinfo } from '../../state/actions/common.actions';
+import { getInitialInfo } from '../../state/actions/common.actions';
 import './ViewPostsByTopic.css';
 
 class ViewPostsByTopic extends Component {
