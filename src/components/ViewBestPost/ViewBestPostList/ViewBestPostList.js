@@ -10,7 +10,7 @@ class ViewBestPostList extends Component {
             <div>
                 {
                     this.props.postDetails && this.props.postDetails.map(post => {
-                    return <ViewBestPostListItem key={post.post_id}  postlistDetails={post} />
+                     return <ViewBestPostListItem key={post.post_id}  postlistDetails={post} />
                    })
                 }
             </div>

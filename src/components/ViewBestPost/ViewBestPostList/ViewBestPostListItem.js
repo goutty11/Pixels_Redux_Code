@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import './ViewBestPostListItem.css';
 
 class ViewBestPostListItem extends Component {
     constructor(props){
@@ -6,7 +7,7 @@ class ViewBestPostListItem extends Component {
     }
     render() {
         return (
-            <div>
+            <div className="result">
                 {this.props.postlistDetails.post_id}
             </div>
         );

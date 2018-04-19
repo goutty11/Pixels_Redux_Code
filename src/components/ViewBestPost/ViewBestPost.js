@@ -11,10 +11,8 @@ class ViewBestPost extends Component {
     render() {
         if (this.props &&
             this.props.bestPost.post.result &&
-            this.props.bestPost.post.result.post_id &&
-            this.props.bestPost.post.result.first_name &&
-            this.props.bestPost.post.result.topic_id && 
-            this.props.bestPost.post.result.url) 
+            this.props.bestPost.post.result
+            ) 
             {
                 return (
                     <div>
