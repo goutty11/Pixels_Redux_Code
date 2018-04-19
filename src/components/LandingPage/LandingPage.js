@@ -7,7 +7,7 @@ import "./LandingPage.css";
 class LandingPage extends Component {
     render() {
         return (
-            <div className = "landingPage">
+            <div>
                 <ViewPostsByTopic />
             </div>
         );

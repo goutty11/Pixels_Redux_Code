@@ -69,7 +69,7 @@ class App extends Component {
                     <div>
                         <Switch>
                             <Route exact path="/" component={LandingPage}/>
-                            <Route path="/userPofile/:userId" component={UserProfile}/>
+                            <Route path="/userPofile" component={UserProfile}/>
                             <Route path="/bestPost" component={viewBestPost} />
                         </Switch>
                     </div>

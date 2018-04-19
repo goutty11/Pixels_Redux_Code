@@ -6,10 +6,10 @@
     background-color: lightgray;
 }
 
-.post {
+.postContainer {
     border-style: solid;
     border-width: 1px;
-    width: 85%;
+    width: 98%;
     margin-bottom: 5%;
 }
 

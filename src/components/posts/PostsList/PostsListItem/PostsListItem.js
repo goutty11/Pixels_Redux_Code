@@ -33,7 +33,7 @@ class PostsListItem extends Component {
 
     render() {
         return (
-            <div className="post">
+            <div className="postContainer">
                 <span><h1>{this.props.post.Posted_by}</h1></span>    
                 <span>{this.props.post.post_id}</span>
                 <div className="ImageSize"><img src={this.props.post.url}/></div>

@@ -25,7 +25,7 @@ class ViewPostsByTopic extends Component {
             this.loggedInUserId) 
         {
             return (
-                <div className="App">
+                <div>
                     <PostsByTopic topicId={this.props.initialInfo.data.currentTopic.topic_id} userId={this.loggedInUserId}/>         
                 </div>
             );
