@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import store from '../../state/store';
 import { getBestPost } from '../../state/actions/posts.actions';
-import  ViewBestPostList  from './ViewBestPostList/ViewBestPostList';
+import  BestPostList  from './BestPostList/BestPostList';
 
 class ViewBestPost extends Component {
     componentWillMount() {
@@ -16,7 +16,7 @@ class ViewBestPost extends Component {
             {
                 return (
                     <div>
-                        <ViewBestPostList postDetails={this.props.bestPost.post.result}/>
+                        <BestPostList postDetails={this.props.bestPost.post.result}/>
                     </div>
                 );
             }

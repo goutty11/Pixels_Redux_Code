@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import ViewBestPostListItem from './ViewBestPostListItem';
+import BestPostListItem from './BestPostListItem/BestPostListItem';
 
-class ViewBestPostList extends Component {
+class BestPostList extends Component {
     constructor(props){
         super(props);
     }
@@ -10,7 +10,7 @@ class ViewBestPostList extends Component {
             <div>
                 {
                     this.props.postDetails && this.props.postDetails.map(post => {
-                     return <ViewBestPostListItem key={post.post_id}  postlistDetails={post} />
+                     return <BestPostListItem key={post.post_id}  postlistDetails={post} />
                    })
                 }
             </div>
@@ -18,4 +18,4 @@ class ViewBestPostList extends Component {
     }
 }
 
-export default ViewBestPostList;
+export default BestPostList;

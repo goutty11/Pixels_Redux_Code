@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import './ViewBestPostListItem.css';
+import './BestPostListItem.css';
 
-class ViewBestPostListItem extends Component {
+class BestPostListItem extends Component {
     constructor(props){
         super(props);
     }
@@ -27,4 +27,4 @@ class ViewBestPostListItem extends Component {
     }
 }
 
-export default ViewBestPostListItem;
+export default BestPostListItem;
