@@ -18,7 +18,7 @@ class ViewBestPost extends Component {
             {
                 return (
                     <div>
-                        <ViewBestPostList postDetails={this.props.bestPost.post.result}/>
+                        <ViewBestPostList postDetails={this.props.bestPost.post}/>
                     </div>
                 );
             }
