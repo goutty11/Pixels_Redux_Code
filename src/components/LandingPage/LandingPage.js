@@ -8,7 +8,6 @@ class LandingPage extends Component {
     render() {
         return (
             <div className = "landingPage">
-                <ViewBestPost />
                 <ViewPostsByTopic />
             </div>
         );
