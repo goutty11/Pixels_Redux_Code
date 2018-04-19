@@ -10,15 +10,15 @@ class ViewBestPost extends Component {
     }
     render() {
         if (this.props &&
-            this.props.bestPost.post &&
-            this.props.bestPost.post.post_id &&
-            this.props.bestPost.post.first_name &&
-            this.props.bestPost.post.topic_id && 
-            this.props.bestPost.post.url) 
+            this.props.bestPost.post.result &&
+            this.props.bestPost.post.result.post_id &&
+            this.props.bestPost.post.result.first_name &&
+            this.props.bestPost.post.result.topic_id && 
+            this.props.bestPost.post.result.url) 
             {
                 return (
                     <div>
-                        <ViewBestPostList postDetails={this.props.bestPost.post}/>
+                        <ViewBestPostList postDetails={this.props.bestPost.post.result}/>
                     </div>
                 );
             }
