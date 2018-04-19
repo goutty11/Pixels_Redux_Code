@@ -15,8 +15,7 @@ class Header extends Component {
         return(
             <div className="header">
                 <div className="appTitle">PIXELS</div>
-                <div onClick={() => this.refs.child.openModal()} className="addPost">
-                    <ImagesModal ref="child" />    
+                <div className="addPost">
                     Post
                 </div>
                 <span className="UserName" onClick={this.GoToUser}>Mano</span>
