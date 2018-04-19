@@ -7,7 +7,10 @@ import {
     GET_POSTS_BY_USER_REJECTED,
     GET_POST_PENDING,
     GET_POST_FULFILLED,
-    GET_POST_REJECTED
+    GET_POST_REJECTED,
+    GET_BEST_POST_PENDING,
+    GET_BEST_POST_FULFILLED,
+    GET_BEST_POST_REJECTED
 } from '../../common/constants';
 
 const postsByInitialState = {
