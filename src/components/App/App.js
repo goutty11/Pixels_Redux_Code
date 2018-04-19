@@ -59,6 +59,7 @@ import { BrowserRouter, Route, Link, Switch } from 'react-router-dom';
 import LandingPage from '../LandingPage/LandingPage';
 import UserProfile from '../UserProfile/UserProfile';
 import Header from '../Layout/Header/Header';
+import viewBestPost  from '../ViewBestPost/ViewBestPost';
 
 class App extends Component {
     render() {
@@ -66,12 +67,10 @@ class App extends Component {
             <BrowserRouter>
                 <div>
                     <div>
-                        <Header/>
-                    </div>
-                    <div>
                         <Switch>
                             <Route exact path="/" component={LandingPage}/>
                             <Route path="/userPofile/:userId" component={UserProfile}/>
+                            <Route path="/bestPost" component={viewBestPost} />
                         </Switch>
                     </div>
                 </div>
