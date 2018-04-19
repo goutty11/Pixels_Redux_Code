@@ -71,7 +71,7 @@ class App extends Component {
                     <div>
                         <Switch>
                             <Route exact path="/" component={LandingPage}/>
-                            <Route path="/sample" component={UserProfile}/>
+                            <Route path="/userPofile/:userId" component={UserProfile}/>
                         </Switch>
                     </div>
                 </div>
