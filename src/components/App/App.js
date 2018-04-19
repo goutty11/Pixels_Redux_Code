@@ -23,26 +23,26 @@ class App extends React.Component {
     }
 
     render() {
-        // if (this.props &&
-        //     this.props.initialInfo &&
-        //     this.props.initialInfo.data &&
-        //     this.props.initialInfo.data.currentTopic &&
-        //     this.props.initialInfo.data.currentTopic.topic_id && 
-        //     this.loggedInUserId) {
-
         if (this.props &&
             this.props.initialInfo &&
             this.props.initialInfo.data &&
-            this.props.initialInfo.data.loggedInUserDetails &&
-            this.props.initialInfo.data.loggedInUserDetails && 
+            this.props.initialInfo.data.currentTopic &&
+            this.props.initialInfo.data.currentTopic.topic_id && 
             this.loggedInUserId) {
+
+        // if (this.props &&
+        //     this.props.initialInfo &&
+        //     this.props.initialInfo.data &&
+        //     this.props.initialInfo.data.loggedInUserDetails &&
+        //     this.props.initialInfo.data.loggedInUserDetails && 
+        //     this.loggedInUserId) {
         
 
             return (
                 <div className="App">
                     {/* <PostsByUser userId={1} /> */}
-                    {/* <PostsByTopic topicId={this.props.initialInfo.data.currentTopic.topic_id} userId={this.loggedInUserId}/> */}
-                    <UserProfile userDetails={this.props.initialInfo.data.loggedInUserDetails} /> 
+                    <PostsByTopic topicId={this.props.initialInfo.data.currentTopic.topic_id} userId={this.loggedInUserId}/> 
+                    {/* <UserProfile userDetails={this.props.initialInfo.data.loggedInUserDetails} /> */}
                 </div>
             );
         } else {
