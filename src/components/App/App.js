@@ -58,11 +58,15 @@ import React, { Component } from 'react';
 import { BrowserRouter, Route, Link, Switch } from 'react-router-dom';
 import LandingPage from '../LandingPage/LandingPage';
 import UserProfile from '../UserProfile/UserProfile';
+import Header from '../Layout/Header/Header';
 
 class App extends Component {
     render() {
         return (
             <BrowserRouter>
+                <div>
+                    <Header/>
+                </div>
                 <div>
                     <Switch>
                         <Route exact path="/" component={LandingPage}/>
