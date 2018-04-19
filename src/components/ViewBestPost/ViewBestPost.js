@@ -15,12 +15,16 @@ class ViewBestPost extends Component {
             this.props.bestPost.post.first_name &&
             this.props.bestPost.post.topic_id && 
             this.props.bestPost.post.url) 
-        {
-        return (
-            <div>
-                <ViewBestPostList postDetails={this.props.bestPost.data.result}/>
-            </div>
-        );
+            {
+                return (
+                    <div>
+                        <ViewBestPostList postDetails={this.props.bestPost.data.result}/>
+                    </div>
+                );
+            }
+        else{
+            return <div/>
+        }
     }
 }
 
