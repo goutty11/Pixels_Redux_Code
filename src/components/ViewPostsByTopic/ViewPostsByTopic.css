@@ -1,4 +1,5 @@
 .App {
-    margin-left: 10px;
+    display: flex;
+    margin-left: 32%;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
 }
