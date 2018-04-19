@@ -10,7 +10,7 @@ class ViewBestPostListItem extends Component {
             <div className="postDetails">
                 <div className="bestPic">Best Pic of previous week</div>
                 <div className="postURL">
-                    {this.props.postlistDetails.url}
+                   <img src={this.props.postlistDetails.url} />
                 </div>
                 <div className="postValues">
                     <div className="winner">
