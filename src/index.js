@@ -6,26 +6,26 @@ import store from './state/store';
 import App from './components/App/App';
 import { BrowserRouter, Route, Link } from 'react-router-dom';
 
-class Index extends Component {
-    render() {
-        return (
-            <BrowserRouter>
-                <App/>
-            </BrowserRouter>
-        );
-    }
-}
+// class Index extends Component {
+//     render() {
+//         return (
+//             <BrowserRouter>
+//                 <App/>
+//             </BrowserRouter>
+//         );
+//     }
+// }
 
-const jsx = (
-    <Provider store={store}>
-        <App />
-    </Provider>
-);
-
-// ReactDOM.render(
+// const jsx = (
 //     <Provider store={store}>
 //         <App />
-//     </Provider>,
-// document.getElementById('root'));
+//     </Provider>
+// );
 
-ReactDOM.render(jsx, document.getElementById('root'));
+ReactDOM.render(
+    <Provider store={store}>
+        <App />
+    </Provider>,
+document.getElementById('root'));
+
+//ReactDOM.render(jsx, document.getElementById('root'));

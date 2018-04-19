@@ -62,14 +62,14 @@ import UserProfile from '../UserProfile/UserProfile';
 class App extends Component {
     render() {
         return (
-            <div>
+            <BrowserRouter>
                 <div>
                     <Switch>
                         <Route exact path="/" component={LandingPage}/>
                         <Route path="/sample" component={UserProfile}/>
                     </Switch>
                 </div>
-            </div>
+            </BrowserRouter>
         );
     }
 }
