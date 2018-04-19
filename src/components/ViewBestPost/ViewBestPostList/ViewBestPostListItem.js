@@ -7,8 +7,21 @@ class ViewBestPostListItem extends Component {
     }
     render() {
         return (
-            <div className="result">
-                {this.props.postlistDetails.post_id}
+            <div className="postDetails">
+                <div className="bestPic">Best Pic of previous week</div>
+                <div className="postURL">
+                    {this.props.postlistDetails.url}
+                </div>
+                <div className="postValues">
+                    <div className="winner">
+                        <span className="postedBy">Post By</span>
+                        <span className="firstName">{this.props.postlistDetails.first_name}</span>
+                    </div>
+                    <div className="totalVotes">
+                        <span className="votes">Votes</span>
+                        <span className="voteCount">{this.props.postlistDetails.vote_count}</span>
+                    </div>
+                </div>
             </div>
         );
     }

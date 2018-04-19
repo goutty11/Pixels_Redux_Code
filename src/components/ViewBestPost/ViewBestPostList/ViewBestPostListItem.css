@@ -1,4 +1,78 @@
-.result {
-    width: 25%;
-    height: 45px;
+.postDetails {
+    display: flex;
+    flex-direction: column;
+    margin: 78px 1px 50px 10px;
+    width: 30%;
+    height: 550px; 
+    position: fixed;
+}
+
+.postDetails > .bestPic {
+    margin: 15px 10px 5px 15px;
+    width: 60%;
+    font-family: sans-serif;
+    height: 8%; 
+    font-weight: 200;
+    border-radius: 10px;
+    font-size: 22px;
+    text-align: left;
+    flex-shrink: inherit;
+}
+
+
+.postDetails > .postURL {
+    margin: 6px 10px 30px 10px;
+    width: 95%;
+    height: 270px; 
+    background-size: cover;
+}
+
+
+.postDetails > .postValues {
+    display: flex;
+    flex-direction: column;
+    width:60%;
+    height:110px;
+    color:black;
+    margin-left: 10px;
+    border-radius: 10px;
+}
+
+.postDetails > .postValues >.winner {
+    align-self: center;
+    width:100%;
+    height:30px;
+    margin:1px auto;
+}
+
+.postDetails > .postValues >.winner >.postedBy {
+    font-size: 17px;
+    font-family: sans-serif;
+}
+
+.postDetails > .postValues >.winner >.firstName {
+    font-size: 25px;
+    font-family: sans-serif;
+    margin-left: 15px;
+    letter-spacing: 1px;
+}
+
+.postDetails > .postValues >.totalVotes {
+    margin-top:17px;
+    height:30px;
+    font-size: 22px;
+    font-family: sans-serif;
+}
+
+.postDetails > .postValues >.totalVotes > .votes {
+    font-size: 15px;
+    font-family: sans-serif;
+    letter-spacing: 1px;
+}
+
+.postDetails > .postValues >.totalVotes > .voteCount {
+    margin-left: 15px;
+    font-size: 25px;
+    font-family: sans-serif;
+    letter-spacing: 1px;
 }
