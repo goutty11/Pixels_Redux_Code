@@ -8,7 +8,7 @@ import PostsByTopic from "../posts/PostsByTopic";
 import UserProfile from "../UserProfile/UserProfile";
 
 import store from "../../state/store";
-import { getinitialInfo } from "../../state/actions/common.actions";
+import { getInitialInfo } from "../../state/actions/common.actions";
 
 class LandingPage extends Component {
     constructor(props){
