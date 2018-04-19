@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import PostsByTopic from '../posts/PostsByTopic';
 import store from '../../state/store';
 import { getInitialInfo } from '../../state/actions/common.actions';
+import UserProfile from '../../components/UserProfile/UserProfile';
 import './ViewPostsByTopic.css';
 
 class ViewPostsByTopic extends Component {
@@ -24,9 +25,17 @@ class ViewPostsByTopic extends Component {
             this.props.initialInfo.data.currentTopic.topic_id && 
             this.loggedInUserId) 
         {
+
+        // if (this.props &&
+        //     this.props.initialInfo &&
+        //     this.props.initialInfo.data &&
+        //     this.props.initialInfo.data.loggedInUserDetails &&
+        //     this.loggedInUserId) 
+        // {
             return (
                 <div>
-                    <PostsByTopic topicId={this.props.initialInfo.data.currentTopic.topic_id} userId={this.loggedInUserId}/>         
+                    {/*<PostsByTopic topicId={this.props.initialInfo.data.currentTopic.topic_id} userId={this.loggedInUserId}/>*/}
+                    <UserProfile userDetails={this.props.initialInfo.data.loggedInUserDetails} />
                 </div>
             );
         }

@@ -43,37 +43,47 @@ class UserProfileList extends Component {
     render() {
         return (
             <div className="userInfo">
-                <div className="userName">
-                        
-                        <input type="text" className="firstName" value={this.state.firstName} 
-                            onChange={this.onChange.firstName}
-                        />
-                    
-                    
-                        <input type="text" className="lastName" value={this.state.lastName} 
-                            onChange={this.onChange.lastName}
-                        />
-                    
-                </div>
-                <div className="userEmail">
-                    <span>Mail Id</span>
-                    <span>
-                        <input type="text" className="mailId" value={this.state.mailId} 
-                            onChange={this.onChange.mailId}
-                        />
-                    </span>
-                </div>
-                <div className="profilePicture">
-                    <img src={this.state.profilePic}/>
-                </div>
-                <div className="totalPosts">
+                    <div className="profilePicture">
+                        Profile pic
+                        {/* <img src={this.state.profilePic}/> */}
+                    </div>
+                    <div className="profile">
+                            <div className="Name">
+                                <span className="key">First Name</span>
+                                <input type="text" className="firstName" value={this.state.firstName} 
+                                    onChange={this.onChange.firstName}
+                                />
+                            </div>
+                            <div className="Name">
+                                <span className="key">Last Name</span>
+                                <input type="text" className="lastName" value={this.state.lastName} 
+                                    onChange={this.onChange.lastName}
+                                />
+                            </div>
+                            <div className="Name">
+                                <span className="key">Mail ID</span>
+                                    <input type="text" className="userEmail" value={this.state.mailId} 
+                                        onChange={this.onChange.mailId}
+                                    />
+                            </div>
+                            <div className="postCount">
+                                <span>Total number of posts:</span>
+                                <span className = "totalCount">
+                                    {this.state.postCount}
+                                </span>
+                            </div>
+                            <div className="save" onClick={this.editDetails}>Save</div>
+                        </div>
+                
+                
+                { /*<div className="totalPosts">
                     <span>Total number of posts:</span>
                     <span className = "postsCount">
                         {this.state.postCount}
                      </span>
                 </div>
                 
-                <button className="save" onClick={this.editDetails}>Save</button>
+        <button className="save" onClick={this.editDetails}>Save</button> */ }
             </div>
         );
     }

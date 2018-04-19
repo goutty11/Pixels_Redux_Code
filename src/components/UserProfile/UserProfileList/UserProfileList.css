@@ -1,22 +1,10 @@
-.userProfile {
-    margin:auto;
-    width:55%;
-    height:auto;
-    display: flex;
-    flex-wrap: wrap;
-    border-style: solid;
-    border-width: 1px;
-    font-family: sans-serif;
-}
-
 .userInfo {
     display: flex;
-    flex-direction: column;
-    margin-top: 25px;
+    margin: 10%;
     border-style: solid;
     border-width: 1px; 
-    width:60%;
-    height:450px;
+    width:80%;
+    height:480px;
     float: left;
     padding-top: 8px;
     text-align: center;
@@ -24,17 +12,32 @@
     font-family: sans-serif;
 }
 
-.userInfo > .userName {
+.userInfo > .profile {
     display: flex;
+    margin-top: 3%;
+    margin-left: 10%;
+    flex-direction: column;
     width: 85%;
 }
 
-.userInfo > .firstName {
+.userInfo > .profile > .Name {
+    display: flex;
+    margin-bottom: 12%;
+}
+
+.userInfo > .profile > .Name > .key{
+    margin-top: 2%;
+    height: 10%;
+    /* border-style: solid;
+    border-width: 1px; */
+}
+
+.userInfo > .profile > .Name > .firstName {
     margin: 3px 25px 5px 25px;
     align-content: center;
-    /* border-style: solid;
-    border-width: 1px; */
-    width:70%;
+    border-style: solid;
+    border-width: 1px; 
+    width:250px;
     height:30px;
     float: left;
     padding-top: 8px;
@@ -43,11 +46,13 @@
     font-family: sans-serif;
 }
 
-.userInfo > .lastName {
+.userInfo > .firstName:hover {
+    cursor: pointer;
+}
+
+.userInfo > .profile > .Name > .lastName {
     margin: 3px 25px 5px 25px;
-    /* border-style: solid;
-    border-width: 1px; */
-    width:70%;
+    width:250px;
     height:30px;
     float: left;
     padding-top: 8px;
@@ -56,22 +61,9 @@
     font-family: sans-serif;
 }
 
-.userInfo > .userEmail {
-    margin: 5px 25px 5px 25px;
-    /* border-style: solid;
-    border-width: 1px; */
-    width:80%; 
-    height:40px;
-    padding-top: 8px;
-    font-size:24px;
-    text-align:left;
-}
-
-.userInfo > .userEmail > .mailId {
+.userInfo > .profile > .Name > .userEmail {
     margin: 3px 25px 5px 25px;
-    /* border-style: solid;
-    border-width: 1px; */
-    width:125%;
+    width:480px;
     height:30px;
     float: left;
     padding-top: 8px;
@@ -80,12 +72,27 @@
     font-family: sans-serif;
 }
 
-.userInfo > .userEmail > .profilePicture {
+.userInfo > .profile > .mailId {
+    margin: 3px 25px 5px 25px;
+    align-content: center;
+    width:450px;
+    height:45px;
+    float: left;
+    padding-top: 8px;
+    text-align: left;
+    font-size:24px;
+    font-family: sans-serif;
+}
+
+.userInfo >  .profilePicture {
     width: 30%;
     height:70%;
+    margin: 2%;
+    border-style: solid;
+    border-width: 1px;
 }
 
-.userInfo > .totalPosts {
+.userInfo > .profile > .postCount {
     margin: 5px 25px 5px 25px;
     /* border-style: solid;
     border-width: 1px; */
@@ -96,14 +103,19 @@
     text-align: left;
 }
 
-.userInfo > .totalPosts > .postsCount{
+.userInfo > .profile > .postCount > .totalCount{
     margin: 5px 0px 0px 10px;
     /* border-style: solid;
     border-width: 1px; */
 }
 
-.userInfo > .save {
-    width: 50%;
+.userInfo > .profile >.save {
+    margin: 10%;
+    width: 10%;
+    height: 30px;
+    border-radius: 5px;
+    border-style: solid;
+    border-width: 1px;
 }
 
 .firstName {
