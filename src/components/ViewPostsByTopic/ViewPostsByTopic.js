@@ -34,8 +34,8 @@ class ViewPostsByTopic extends Component {
         // {
             return (
                 <div>
-                    {/*<PostsByTopic topicId={this.props.initialInfo.data.currentTopic.topic_id} userId={this.loggedInUserId}/>*/}
-                    <UserProfile userDetails={this.props.initialInfo.data.loggedInUserDetails} />
+                    <PostsByTopic topicId={this.props.initialInfo.data.currentTopic.topic_id} userId={this.loggedInUserId}/>
+                    {/* <UserProfile userDetails={this.props.initialInfo.data.loggedInUserDetails} /> */}
                 </div>
             );
         }
