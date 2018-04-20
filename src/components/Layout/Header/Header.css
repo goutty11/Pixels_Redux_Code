@@ -23,7 +23,7 @@
     color: white;
 }
 
-.header >.addPost {
+.header > .addPost {
     display: flex;
     margin-top: 10px;
     padding-left: 7px;
@@ -41,9 +41,28 @@
 }
 
 
+.header > .viewMyPosts {
+    display: flex;
+    margin-top: 10px;
+    margin-left: 95px;
+    padding-left: 25px;
+    border-style: solid;
+    border-width: 1px;
+    min-width:185px;
+    height:27px;
+    font-size: 25px;
+    font-family: serif;
+    letter-spacing: 2px;
+    cursor: pointer;
+    color: #47494D;
+    background-color: lightgray;
+    border-radius: 5px;
+}
+
+
 .header > .UserName {
     min-width:7%;
-    margin: 10px 10px 5px 45px; 
+    margin: 10px 10px 5px 285px; 
     float: Right;
     font-size: 30px;
     color: azure;
@@ -53,8 +72,13 @@
 }
 
 
+.header > .UserName:hover {
+    cursor: pointer;
+}
+
+
 .header > .logOut {
-    margin: 14px 0px 5px 65px; 
+    margin: 14px 0px 5px 15px; 
     width: 50%;
     color: azure;
     min-width:10%;
@@ -62,4 +86,8 @@
     font-size: 25px;
     height: 50%;
     float: right;
+}
+
+.header > .logOut:hover {
+    cursor: pointer;
 }

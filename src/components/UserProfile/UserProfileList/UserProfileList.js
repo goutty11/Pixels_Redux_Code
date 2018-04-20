@@ -44,8 +44,8 @@ class UserProfileList extends Component {
         return (
             <div className="userInfo">
                     <div className="profilePicture">
-                        Profile pic
-                        {/* <img src={this.state.profilePic}/> */}
+                        
+                         <img src={this.state.profilePic}/> 
                     </div>
                     <div className="profile">
                             <div className="Name">

@@ -13,9 +13,13 @@ class BestPostListItem extends Component {
                    <img src={this.props.postlistDetails.url} />
                 </div>
                 <div className="postValues">
+                    <div className="topicInfo">
+                        <span className="postedBy">Topic</span>
+                        <span className="title">{this.props.postlistDetails.topic_title}</span>
+                    </div>
                     <div className="winner">
                         <span className="postedBy">Post By</span>
-                        <span className="firstName">{this.props.postlistDetails.first_name}</span>
+                        <span className="Name">{this.props.postlistDetails.first_name}</span>
                     </div>
                     <div className="totalVotes">
                         <span className="votes">Votes</span>

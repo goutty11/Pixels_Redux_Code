@@ -9,18 +9,27 @@ class Header extends Component {
         this.props.history.push('/UserProfile')
     }
 
+    viewUserPosts = () => {
+        this.props.history.push('/postsByUser')
+    }
+
+    goToHomePage = () => {
+        this.props.history.push('/');
+    }
+
     render() {
         return(
             <div className="header">
-                <div className="appTitle">PIXELS</div>
+                <div onClick ={this.goToHomePage} className="appTitle">PIXELS</div>
                 <div className="addPost">
                     Post
                 </div>
-                <span className="UserName" onClick={this.GoToUser}>Mano</span>
+                <div className="viewMyPosts" onClick={this.viewUserPosts}>View my posts</div>
+                <span className="UserName" onClick={this.goToUserProfile}>Mano</span>
                 <span className="logOut">log out</span> 
             </div>
         );
     }
 }
 
-export default Header;
+export default withRouter(Header);

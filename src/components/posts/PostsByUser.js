@@ -7,7 +7,8 @@ import { getPostByUser } from '../../state/actions/posts.actions';
 
 class PostsByUser extends Component {
     componentWillMount() {
-        this.updatePostsByUser();
+        store.dispatch(getPostByUser(this.props.userId));
+        //this.updatePostsByUser();
     }
 
     componentWillReceiveProps(nextProps) {
