@@ -3,7 +3,7 @@ import store from '../../state/store';
 import PostsList from './PostsList/PostsList';
 import { connect } from 'react-redux';
 
-import { getPostByTopic, getPost } from '../../state/actions/posts.actions';
+import { getPostByTopic } from '../../state/actions/posts.actions';
 import { updateVote } from '../../state/actions/votes.actions';
 
 class PostsByTopic extends Component {

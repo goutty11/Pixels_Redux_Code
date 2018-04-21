@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import FontAwesomeIcon from '@fortawesome/react-fontawesome';
 import './PostsListItem.css';
 class PostsListItem extends Component {
     render() {
@@ -22,8 +21,8 @@ class PostsListItem extends Component {
                     <span className="post-actions-vote" onClick={(e) => this.props.updateVote(this.props.post.post_id, this.props.post.vote_id)}>
                         {
                             this.props.post.is_voted === 1
-                                ? <i class="fas fa-heart"></i>
-                                : <i class="far fa-heart"></i> 
+                                ? <i className="fas fa-heart"></i>
+                                : <i className="far fa-heart"></i> 
                         }
                     </span>
                     <span> {this.props.post.vote_count} votes</span>
