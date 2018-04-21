@@ -20,15 +20,13 @@ class ViewPostsByUser extends Component {
                 this.props.initialInfo &&
                 this.props.initialInfo.data &&
                 this.props.initialInfo.data.loggedInUserDetails &&
-                this.loggedInUserId) 
-            {
+                this.loggedInUserId) {
             return (
                 <div>
                     <PostsByUser userId={this.loggedInUserId}/> 
                 </div>
             );
-        }
-        else {
+        } else {
             return <div />;
         }
 

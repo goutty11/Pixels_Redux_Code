@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import ViewPostsByTopic from '../posts/ViewPostsByTopic/ViewPostsByTopic';
-import ViewBestPost from '../ViewBestPost/ViewBestPost';
+import ViewBestPost from '../posts/ViewBestPost/ViewBestPost';
 import "./LandingPage.css";
 
 

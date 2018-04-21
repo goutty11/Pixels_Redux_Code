@@ -37,21 +37,6 @@ const postInitialState = {
     }
 };
 
-
-const bestPostInitialState = {
-    fetching: false,
-    fetched: false,
-    error: null,
-    post: {
-        "post_id": null,
-        "url": null,
-        "post_description": null,
-        "topic_id": null,
-        "first_name": null,
-        "topic_title": null,
-    }
-}
-
 export const postsByTopic = (state = postsByInitialState, action) => {
     switch (action.type) {
         case GET_POSTS_BY_TOPIC_PENDING:
@@ -59,7 +44,7 @@ export const postsByTopic = (state = postsByInitialState, action) => {
         case GET_POSTS_BY_TOPIC_FULFILLED:
             return { ...state, fetching: false, posts: action.payload.data.items };
         case GET_POSTS_BY_TOPIC_REJECTED:
-            return { ...state, fetching: false, error: action.payload.data.error };
+            return { ...state, fetching: false, error: action.payload.error };
         default:
             return state;
     }
@@ -72,10 +57,10 @@ export const postsByUser = (state = postsByInitialState, action) => {
         case GET_POSTS_BY_USER_FULFILLED:
             return { ...state, fetching: false, posts: action.payload.data.items };
         case GET_POSTS_BY_USER_REJECTED:
-            return { ...state, fetching: false, error: action.payload.data.error };
+            return { ...state, fetching: false, error: action.payload.error };
         default:
             return state;
-        }
+    }
 };
 
 export const post = (state = postInitialState, action) => {
@@ -85,21 +70,20 @@ export const post = (state = postInitialState, action) => {
         case GET_POST_FULFILLED:
             return { ...state, fetching: false, post: action.payload.data };
         case GET_POST_REJECTED:
-            return { ...state, fetching: false, error: action.payload.data.error };
+            return { ...state, fetching: false, error: action.payload.error };
         default:
             return state;
         }
 };
 
-
-export const bestPost = (state = bestPostInitialState, action) => {
+export const bestPost = (state = postInitialState, action) => {
     switch (action.type) {
         case GET_BEST_POST_PENDING:
             return { ...state, fetching: true};
         case GET_BEST_POST_FULFILLED:
             return { ...state, fetching: false, post: action.payload.data };
         case GET_BEST_POST_REJECTED:
-            return { ...state, fetching: false, error: action.payload.data.error };
+            return { ...state, fetching: false, error: action.payload.error };
         default:
             return state;
         }

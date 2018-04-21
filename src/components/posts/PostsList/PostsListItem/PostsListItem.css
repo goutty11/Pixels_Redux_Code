@@ -1,17 +1,6 @@
-.Result {
-    border-style: solid;
-    border-width: 1px;
-    width: 75%;
-    height: 125px;
-    background-color: lightgray;
-}
-
-.postContainer {
-    border-style: solid;
-    border-width: 1px;
-    margin-top: 5%;
-    width: 98%;
-    margin-bottom: 5%;
+.post.container {
+    padding: 5px;
+    margin: 5px 0px;
 }
 
 .post > .ImageSize {

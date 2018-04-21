@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import store from '../../state/store';
-import { getBestPost } from '../../state/actions/posts.actions';
+import store from '../../../state/store';
+import { getBestPost } from '../../../state/actions/posts.actions';
 import  BestPostList  from './BestPostList/BestPostList';
 
 class ViewBestPost extends Component {

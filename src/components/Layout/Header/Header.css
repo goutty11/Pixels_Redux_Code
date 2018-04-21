@@ -1,93 +1,65 @@
-.header {
-    border-width: 1px;
-    border-style: solid;
+.app.header {
     display: flex;
     flex-direction: row;
-    height: 7%; 
-    width: 99%;
-    position: fixed;
-    margin-top: 1px;
+    min-height: 40px;
     background-color:#47494D;
+    color: azure;
+    font-size: 20px;
+    width: 100%;
+    min-width: 850px;
+    position: fixed;
+    top: 0px;
+    white-space: nowrap;
 }
 
-.header > .appTitle {
+.app.header > .app-title {
     display: flex;
     cursor: pointer;
-   /* margin: 2px 220px 5px 25px; */ 
-    margin: 0.5% 17% 5% 1%;
-    min-height: 15%;
     font-size: 35px;
     font-family: serif;
-    min-width: 10%;
-    letter-spacing: 2px;
     color: white;
+    min-width: 30%;
+    padding: 0px 10px;
 }
 
-.header > .addPost {
+.app.header > .posts-actions {
     display: flex;
-    margin-top: 10px;
-    padding-left: 7px;
-    border-style: solid;
-    border-width: 1px;
-    min-width:4%;
-    height:27px;
-    font-size: 25px;
-    font-family: serif;
-    letter-spacing: 2px;
-    cursor: pointer;
-    color: #47494D;
-    background-color: lightgray;
-    border-radius: 5px;
+    align-items: center;
+    justify-content: center;
+    float: left;
+    min-width: 33%;
 }
 
-
-.header > .viewMyPosts {
-    display: flex;
-    margin-top: 10px;
-    margin-left: 95px;
-    padding-left: 25px;
-    border-style: solid;
-    border-width: 1px;
-    min-width:185px;
-    height:27px;
-    font-size: 25px;
-    font-family: serif;
-    letter-spacing: 2px;
-    cursor: pointer;
-    color: #47494D;
-    background-color: lightgray;
-    border-radius: 5px;
-}
-
-
-.header > .UserName {
-    min-width:7%;
-    margin: 10px 10px 5px 285px; 
-    float: Right;
-    font-size: 30px;
-    color: azure;
-    font-size: 30px; 
-    font-weight: 500;
-    text-align: justify;
-}
-
-
-.header > .UserName:hover {
-    cursor: pointer;
-}
-
-
-.header > .logOut {
-    margin: 14px 0px 5px 15px; 
-    width: 50%;
-    color: azure;
-    min-width:10%;
-    text-align: center;
-    font-size: 25px;
-    height: 50%;
+.app.header > .user-actions {
     float: right;
+    min-width: 33%;
+    display: flex;
+   flex-direction: row;
+   justify-content: flex-end;
 }
 
-.header > .logOut:hover {
+.app.header > .posts-actions > .add-post {
+    cursor: pointer;
+    padding: 10px;
+}
+
+.app.header > .posts-actions > .view-my-posts {
+    cursor: pointer;
+    padding: 10px;
+}
+
+.app.header > .user-actions {
+    padding: 10px;
+}
+
+.app.header > .user-actions > .user-name:hover {
+    cursor: pointer;
+}
+
+.app.header > .user-actions {
+    padding: 10px;
+}
+
+.app.header > .user-actions > .log-out:hover {
     cursor: pointer;
 }

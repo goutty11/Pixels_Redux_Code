@@ -2,15 +2,12 @@ import React, { Component } from 'react';
 import './BestPostListItem.css';
 
 class BestPostListItem extends Component {
-    constructor(props){
-        super(props);
-    }
     render() {
         return (
             <div className="postDetails">
                 <div className="bestPic">Best Pic of previous week</div>
                 <div className="postURL">
-                   <img src={this.props.postlistDetails.url} />
+                   <img src={this.props.postlistDetails.url} alt="post"/>
                 </div>
                 <div className="postValues">
                     <div className="topicInfo">
