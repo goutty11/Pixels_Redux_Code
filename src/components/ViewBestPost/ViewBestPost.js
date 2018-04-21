@@ -6,7 +6,7 @@ import  BestPostList  from './BestPostList/BestPostList';
 
 class ViewBestPost extends Component {
     componentWillMount() {
-        store.dispatch(getBestPost());
+        store.dispatch(getBestPost(1));
     }
     render() {
         return (

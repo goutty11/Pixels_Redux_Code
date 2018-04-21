@@ -31,9 +31,9 @@ export const getPost = (postId, loggedInUserId) => {
 };
 
 
-export const getBestPost = () => {
+export const getBestPost = (topicId) => {
     return {
         type: GET_BEST_POST,
-        payload: axios.get(`${PIXELS_API_URL}/get_best_post_details`)
+        payload: axios.get(`${PIXELS_API_URL}/get_best_post/${topicId}`)
     }
-}
+};

@@ -16,7 +16,7 @@ export const updateUser = (state=userDetailsDefaultState, action) => {
         case UPDATE_USER_PENDING:
             return { ...state, fetching: true };
         case UPDATE_USER_FULFILLED:
-            return { ...state, fetching: false, reponse: action.payload.response };
+            return { ...state, fetching: false, response: action.payload.response };
         case UPDATE_USER_REJECTED:
             return { ...state, fetching: false, error: action.payload.error };
         default:
