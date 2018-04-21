@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import store from '../../state/store';
-import { getInitialInfo } from '../../state/actions/common.actions';
-import PostsByUser from '../posts/PostsByUser';
+import store from '../../../state/store';
+import { getInitialInfo } from '../../../state/actions/common.actions';
+import PostsByUser from '../PostsByUser';
 
 class ViewPostsByUser extends Component {
     constructor(props){
