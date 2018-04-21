@@ -9,7 +9,7 @@ class LandingPage extends Component {
         return (
             <div>
                 <ViewBestPost />
-                <ViewPostsByTopic />
+                {/*<ViewPostsByTopic />*/}
             </div>
         );
     }
