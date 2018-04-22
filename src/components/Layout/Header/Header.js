@@ -22,7 +22,7 @@ class Header extends Component {
         this.props.history.push(`/postsByUser`)
     }
 
-    goToHomePage = () => {
+    goHomePage = () => {
         this.props.history.push('/');
     }
 
@@ -41,7 +41,7 @@ class Header extends Component {
     render() {
         return(
             <div className="app header">
-                <div onClick ={this.goToHomePage} className="app-title">PIXELS</div>
+                <div onClick ={this.goHomePage} className="app-title">PIXELS</div>
                 <div className="posts-actions">
                     <div className="add-post" onClick={this.uploadWidget.bind(this)}>
                         <i className="fas fa-camera"></i> New post
