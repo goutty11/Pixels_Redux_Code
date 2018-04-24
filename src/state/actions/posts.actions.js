@@ -4,8 +4,23 @@ import {
     GET_POSTS_BY_TOPIC,
     GET_POSTS_BY_USER,
     GET_POST,
-    GET_BEST_POST
+    GET_BEST_POST,
+    ADD_POST
 } from '../../common/constants';
+
+
+export const addPost = (userId, topicId, filecontext, description, nextTopic) => {
+    return {
+        type: ADD_POST,
+        payload: axios.post(`${PIXELS_API_URL}/upload_post`, { 
+            user_id: userId, 
+            topic_id: topicId, 
+            url: filecontext,
+            description: description,
+            next_topic: nextTopic
+        })
+    }
+};
 
 
 export const getPostByTopic = (id, userId) => {

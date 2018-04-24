@@ -1,9 +1,74 @@
-.Overlay {
-    background-color: rgba(14,47,90,.9)
-    he
+
+.modal {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 3% auto;
+    background-color: whitesmoke;
+    width:50%;
+    height: 600px;
 }
 
-.Modal {
-    background-color: whitesmoke;
-    width:30%;
+.modal > .modal-content-image {
+    margin: 3%;
 }
+
+.modal > .post-information {
+    display: flex;
+    width: 70%;
+    height: 90px;
+    border-style: solid;
+    border-width: 1px;
+}
+
+.modal > .post-information > .description {
+    margin: 5%;
+    height: 180px;
+    width: 180px;
+}
+
+.modal > .post-information > .next-topic {
+    margin: 5%;
+    width: 80px;
+    height:150px;
+}
+
+.modal > .modal-actions {
+    display: flex;
+    justify-content: center;
+    border-style: solid;
+    border-width: 1px;
+    width: 50%;
+    height: 80px;
+}
+
+.modal > .modal-actions > .button-cancel {
+    width: 55px;
+    height: 20px;
+    margin: 8%;
+    text-align: center;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 5px;
+}
+
+.modal > .modal-actions > .button-cancel:hover {
+    cursor: pointer;
+}
+
+
+.modal > .modal-actions > .button-upload {
+    width: 55px;
+    height: 20px;
+    margin: 8%;
+    text-align: center;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 5px;
+}
+
+.modal > .modal-actions > .button-upload:hover {
+    cursor: pointer;
+}
+

@@ -1,10 +1,19 @@
-import React from 'react';
+import React, { Component } from 'react';
+import { connect } from 'react-redux';
+
 import UserProfileList from './UserProfileList/UserProfileList';
 
-const UserProfile = (props) => (
-        <div>
-            <UserProfileList userDetails={props.userDetails} />
-        </div>
-);
+class UserProfile extends Component {
+    render() {
+        return (
+            <div>
+                <UserProfileList userDetails={this.props.initialInfo.data.loggedInUserDetails} />
+            </div>
+        );
+    }
+        
+}
 
-export default UserProfile;
+const mapStateToProps = (state) => state;
+
+export default connect(mapStateToProps)(UserProfile);

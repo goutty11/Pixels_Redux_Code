@@ -10,7 +10,10 @@ import {
     GET_POST_REJECTED,
     GET_BEST_POST_PENDING,
     GET_BEST_POST_FULFILLED,
-    GET_BEST_POST_REJECTED
+    GET_BEST_POST_REJECTED,
+    ADD_POST_PENDING,
+    ADD_POST_FULFILLED,
+    ADD_POST_REJECTED
 } from '../../common/constants';
 
 const postsByInitialState = {
@@ -35,6 +38,13 @@ const postInitialState = {
         "vote_count": 0,
         "comments_count": 0
     }
+};
+
+export const addPostInitialState = {
+    fetching: false,
+    fetched: false,
+    error: null,
+    response: {}
 };
 
 export const postsByTopic = (state = postsByInitialState, action) => {
@@ -83,6 +93,19 @@ export const bestPost = (state = postInitialState, action) => {
         case GET_BEST_POST_FULFILLED:
             return { ...state, fetching: false, post: action.payload.data };
         case GET_BEST_POST_REJECTED:
+            return { ...state, fetching: false, error: action.payload.error };
+        default:
+            return state;
+        }
+};
+
+export const addPost = (state = addPostInitialState, action) => {
+    switch(action.type) {
+        case ADD_POST_PENDING:
+            return { ...state, fetching: true};
+        case ADD_POST_FULFILLED:
+            return { ...state, fetching: false, response: action.payload.data.post_id };
+        case ADD_POST_REJECTED:
             return { ...state, fetching: false, error: action.payload.error };
         default:
             return state;

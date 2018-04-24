@@ -1,6 +1,6 @@
 import { combineReducers } from 'redux';
 import { initialInfo } from './common.reducer';
-import { postsByTopic, postsByUser, bestPost, post } from './posts.reducer';
+import { postsByTopic, postsByUser, bestPost, post, addPost} from './posts.reducer';
 import { updateUser } from './users.reducer';
 import { topicInfo } from './topics.reducer'; 
 import { updateVote } from './votes.reducer';
@@ -13,5 +13,6 @@ export default combineReducers({
     bestPost,
     updateUser,
     topicInfo,
-    updateVote
+    updateVote,
+    addPost
 });

@@ -11,7 +11,7 @@ class ViewBestPost extends Component {
     render() {
         return (
             <div>
-                <BestPostList postDetails={this.props.bestPost.post.result}/>
+                <BestPostList postDetails={this.props.bestPost.post}/>
             </div>
         );
     }
