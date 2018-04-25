@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import ViewPostsByTopic from '../posts/ViewPostsByTopic/ViewPostsByTopic';
 import ViewBestPost from '../posts/ViewBestPost/ViewBestPost';
-import "./LandingPage.css";
+import Topic from '../Topic/Topic';
+import './LandingPage.css';
 
 
 class LandingPage extends Component {
@@ -10,6 +11,7 @@ class LandingPage extends Component {
             <div>
                 <ViewBestPost />
                 <ViewPostsByTopic />
+                <Topic />
             </div>
         );
     }

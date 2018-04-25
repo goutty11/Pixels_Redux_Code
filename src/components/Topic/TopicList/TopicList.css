@@ -1,0 +1,50 @@
+.current-topic-details {
+    display: flex;
+    position: fixed;
+    width: 35%;
+    margin-left: 72%;
+    height: 150px;
+    border-style: solid;
+    border-width: 1px;
+    font-family: serif;
+}
+
+.current-topic {
+    display: flex;
+    position: fixed;
+    margin-bottom: 10px;
+    width: 35%;
+    margin-left: 72%;
+    height: 70px;
+    /* border-style: solid;
+    border-width: 1px; */
+    font-family: serif;
+}
+
+.current-topic > .topic-content {
+    margin: 2px 0px 0px 5px;
+    font-family: serif;
+    font-size: 20px;
+    font-family: 600;
+}
+
+.current-topic > .topic-title {
+    margin: 1px 0px 0px 15px;
+    font-family: serif;
+    font-size: 25px;
+    font-family: 450;
+}
+
+.available-time {
+    margin: 45px 0px 0px 15px;
+    position: fixed;
+    font-family: serif;
+    font-size: 25px;
+    font-family: 450;
+    width: 35%;
+    margin-left: 72%;
+    padding: 5px;
+    height: 50px;
+    /* border-style: solid;
+    border-width: 1px;  */
+}

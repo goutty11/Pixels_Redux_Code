@@ -1,6 +1,8 @@
 .posts.list {
     margin: auto; 
     /* background-color:lightblue; */
+    
     min-width: 500px;
-    max-width: 555px;
+    max-width: 565px;
+    max-height: 40px; 
 }

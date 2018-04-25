@@ -1,6 +1,9 @@
 .post-container {
     padding: 5px;
-    margin: 8px 0px;
+    margin: 10px 5px 25px 0px;
+    background-color: rgb(245, 249, 253);
+    border-style: hidden;
+    border-radius: 2px;
 }
 
 .post-container > .post-header {
@@ -9,10 +12,10 @@
 }
 
 .post-container > .post-header > .profile-pic {
+    margin-top: 12px;
     min-width: 40px;
     max-width: 60px;
-    border-style: solid;
-    border-width: 1px;
+    background-size: cover;
 }
 
 .post-container > .post-header > .user-name {

@@ -1,7 +1,10 @@
 import React, { Component } from 'react';
-import './UserProfileList.css';
+import { connect } from 'react-redux';
+import { withRouter } from 'react-router-dom';
 import store from '../../../state/store';
+import './UserProfileList.css';
 import { updateUser } from '../../../state/actions/users.actions';
+
 
 class UserProfileList extends Component {
     constructor(props){
@@ -25,6 +28,10 @@ class UserProfileList extends Component {
         this.editDetails = this.editDetails.bind(this);
     }
 
+    goToHomePage = () => {
+        this.props.history.push('/')
+    }
+
     editDetails = () => {
         store.dispatch(updateUser(
                         this.state.userId, 
@@ -32,6 +39,8 @@ class UserProfileList extends Component {
                         this.state.lastName,
                         this.state.mailId
                       ));
+
+        this.goToHomePage();
     };
 
     onHandleChange = (name, e) => {
@@ -44,49 +53,41 @@ class UserProfileList extends Component {
         return (
             <div className="userInfo">
                     <div className="profilePicture">
-                        
-                         <img src={this.state.profilePic} alt="profile pic"/> 
+                        <img src="http://res.cloudinary.com/pixelsapp/image/upload/c_scale,h_274,w_274/v1524549212/Manoj_dp.jpg" alt="profile pic"/> 
                     </div>
                     <div className="profile">
-                            <div className="Name">
-                                <span className="key">First Name</span>
-                                <input type="text" className="firstName" value={this.state.firstName} 
-                                    onChange={this.onChange.firstName}
+                        <div className="name">
+                            <span className="key">First Name</span>
+                            <input type="text" className="firstName" value={this.state.firstName} 
+                                onChange={this.onChange.firstName}
+                            />
+                        </div>
+                        <div className="name">
+                            <span className="key">Last Name</span>
+                            <input type="text" className="lastName" value={this.state.lastName} 
+                                onChange={this.onChange.lastName}
+                            />
+                        </div>
+                        <div className="name">
+                            <span className="key">Mail ID</span>
+                                <input type="text" className="userEmail" value={this.state.mailId} 
+                                    onChange={this.onChange.mailId}
                                 />
-                            </div>
-                            <div className="Name">
-                                <span className="key">Last Name</span>
-                                <input type="text" className="lastName" value={this.state.lastName} 
-                                    onChange={this.onChange.lastName}
-                                />
-                            </div>
-                            <div className="Name">
-                                <span className="key">Mail ID</span>
-                                    <input type="text" className="userEmail" value={this.state.mailId} 
-                                        onChange={this.onChange.mailId}
-                                    />
-                            </div>
-                            <div className="postCount">
-                                <span>Total number of posts:</span>
-                                <span className = "totalCount">
-                                    {this.state.postCount}
-                                </span>
-                            </div>
+                        </div>
+                        <div className="postCount">
+                            <span className="post-count">Total number of posts:</span>
+                            <span className = "total-count">
+                                {this.state.postCount}
+                            </span>
+                        </div>
+                        <div className="user-actions">
+                            <div className="home" onClick={this.goToHomePage}>Back to Home</div>
                             <div className="save" onClick={this.editDetails}>Save</div>
                         </div>
-                
-                
-                { /*<div className="totalPosts">
-                    <span>Total number of posts:</span>
-                    <span className = "postsCount">
-                        {this.state.postCount}
-                     </span>
+                    </div>
                 </div>
-                
-        <button className="save" onClick={this.editDetails}>Save</button> */ }
-            </div>
         );
     }
 }
 
-export default UserProfileList;
+export default withRouter(UserProfileList);

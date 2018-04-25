@@ -1,8 +1,10 @@
 .userInfo {
     display: flex;
-    margin: 10%;
+    margin:auto;
+    margin-top: 50px;
+    margin-left: 150px;
     border-style: solid;
-    border-width: 1px; 
+    border-width: 2px; 
     width:80%;
     height:480px;
     float: left;
@@ -15,107 +17,153 @@
 .userInfo > .profile {
     display: flex;
     margin-top: 3%;
-    margin-left: 10%;
-    flex-direction: column;
+    margin-left: 5%;
     width: 85%;
+    /* border-style: solid;
+    border-width: 1px;  */
+    flex-direction: column;
 }
 
-.userInfo > .profile > .Name {
+.userInfo > .profile > .name {
     display: flex;
-    margin-bottom: 12%;
+    margin-bottom: 7%;
 }
 
-.userInfo > .profile > .Name > .key{
+.userInfo > .profile > .name > .key{
     margin-top: 2%;
     height: 10%;
+    font-family: serif;
     /* border-style: solid;
     border-width: 1px; */
 }
 
-.userInfo > .profile > .Name > .firstName {
-    margin: 3px 25px 5px 25px;
-    align-content: center;
+.userInfo > .profile > .name > .firstName {
+    margin: 5px 25px 5px 25px;
     border-style: solid;
-    border-width: 1px; 
-    width:250px;
-    height:30px;
+    border-width: 1px;
+    min-width: 100px; 
+    max-width:250px;
+    height:26px;
     float: left;
     padding-top: 8px;
-    text-align: left;
+    padding-left: 12px;
     font-size:24px;
-    font-family: sans-serif;
+    font-family: serif;
 }
 
 .userInfo > .firstName:hover {
     cursor: pointer;
 }
 
-.userInfo > .profile > .Name > .lastName {
+.userInfo > .profile > .name > .lastName {
     margin: 3px 25px 5px 25px;
-    width:250px;
-    height:30px;
+    min-width: 175px; 
+    max-width: 450px;
+    height:26px;
     float: left;
     padding-top: 8px;
-    text-align: left;
+    padding-left: 12px;
     font-size:24px;
-    font-family: sans-serif;
+    font-family: serif;
 }
 
-.userInfo > .profile > .Name > .userEmail {
+.userInfo > .profile > .name > .userEmail {
     margin: 3px 25px 5px 25px;
-    width:480px;
+    min-width: 350px; 
+    max-width:550px;
     height:30px;
     float: left;
     padding-top: 8px;
-    text-align: left;
+    padding-left: 12px;
     font-size:24px;
-    font-family: sans-serif;
+    font-family: serif;
 }
 
 .userInfo > .profile > .mailId {
     margin: 3px 25px 5px 25px;
     align-content: center;
+    min-width: 150px;
     width:450px;
     height:45px;
     float: left;
     padding-top: 8px;
     text-align: left;
     font-size:24px;
-    font-family: sans-serif;
+    font-family: serif;
 }
 
 .userInfo >  .profilePicture {
     width: 30%;
     height:70%;
-    margin: 2%;
-    border-style: solid;
-    border-width: 1px;
+    margin: 4%;
+    background-size: cover;
 }
 
 .userInfo > .profile > .postCount {
-    margin: 5px 25px 5px 25px;
+    margin: 5px 25px 5px 2px;
     /* border-style: solid;
-    border-width: 1px; */
-    width:80%;
-    height:40px;
+    border-width: 1px;  */
+    min-width: 150px; 
+    max-width: 375px;
+    height: 40px;
     padding-top: 8px;
     font-size:24px;
+    font-family: serif;
     text-align: left;
 }
 
-.userInfo > .profile > .postCount > .totalCount{
+.userInfo > .profile > .postCount > .post-count {
+    float: left;
+}
+
+.userInfo > .profile > .postCount > .total-count{
     margin: 5px 0px 0px 10px;
+    /* border-style: solid;
+    border-width: 1px;  */
+}
+
+.userInfo > .profile > .user-actions {
+    display: flex;
+    width: 45%;
+    margin-left: 350px;
+    height: 150px;
+    float: right;
     /* border-style: solid;
     border-width: 1px; */
 }
 
-.userInfo > .profile >.save {
-    margin: 10%;
-    width: 10%;
-    height: 30px;
+.userInfo > .profile > .user-actions > .home {
+    margin-top: 30px;
+    margin-left: 35px;
+    width: 50%;
+    min-height: 20px;
+    max-height: 30px;
+    padding-top: 8px;
     border-radius: 5px;
     border-style: solid;
     border-width: 1px;
+}
+
+.userInfo > .profile > .user-actions > .save {
+    margin-top: 30px;
+    margin-left: 35px;
+    width: 20%;
+    min-height: 20px;
+    max-height: 35px;
+    padding-top:2px;
+    border-radius: 5px;
+    border-style: solid;
+    border-width: 1px;
+}
+
+.userInfo > .profile > .user-actions > .save:hover {
+    cursor: pointer;
+    background-color:  rgb(125, 176, 243);
+}
+
+.userInfo > .profile > .user-actions > .home:hover {
+    cursor: pointer;
+    background-color: rgb(125, 176, 243);
 }
 
 .firstName {

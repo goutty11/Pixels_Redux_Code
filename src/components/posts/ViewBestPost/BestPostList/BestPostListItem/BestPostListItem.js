@@ -16,7 +16,6 @@ class BestPostListItem extends Component {
                 <div className="bestPic">Best Find From previous week</div>
                 <div className="postURL">
                      <img src ={this.props.postlistDetails.url} alt="post"/>
-                    
                 </div>
                 <div className="postValues">
                     <div className="winner">

@@ -1,12 +1,17 @@
 import React, { Component } from 'react';
 import './PostsListItem.css';
+import * as utils  from '../../../../common/utils';
+
 class PostsListItem extends Component {
     render() {
         return (
             <div className="post-container">
                 <div className="post-header">
                     {/* {this.props.post.posted_by_id} */}
-                    <span className="profile-pic">Dp</span>
+                    <span className="profile-pic">
+                        <img src={this.props.post.profile_pic} />
+                        {/* <img src={this.props.post ? utils.updateUserProfilePic(this.props.post.profile_pic) : null} /> */}
+                    </span>
                     <span className="user-name">{this.props.post.Posted_by}</span>
                 </div>
                 <div className="post-content">

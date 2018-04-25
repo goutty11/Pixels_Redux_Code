@@ -13,25 +13,23 @@ class Topic extends Component {
         };
     }
 
-    componentWillMount() {
-        store.dispatch(getTopic(this.props.topicId, this.state.limit))
-    }
+    // componentWillMount() {
+    //     store.dispatch(getTopic(this.props.topicId, this.state.limit))
+    // }
     render() {
 
         if (this.props &&
-            this.props.topicInfo &&
-            this.props.topicInfo.data &&
-            this.props.topicInfo.data.currentTopicInfo
-            ) 
-            {
-                return (
-                    <div>
-                        <TopicList topicDetails={this.props.topicInfo.data.currentTopicInfo} />
-                    </div>
-                );
-            }
-        else {
-            return <div/>;
+            this.props.initialInfo &&
+            this.props.initialInfo.data &&
+            this.props.initialInfo.data.currentTopic
+            ) {
+            return (
+                <div>
+                    <TopicList topicDetails={this.props.initialInfo.data.currentTopic} />
+                </div>
+            );
+        } else {
+            return (<div/>);
         }
     }
 

@@ -24,6 +24,8 @@ class UploadPost extends Component {
             nextTopic: "Man"
 
         }
+
+        this.onDescriptionChange = this.onDescriptionChange.bind(this);
     }
 
     componentWillMount() {
@@ -96,7 +98,7 @@ class UploadPost extends Component {
                 </div>
                 <div className="post-information">
                     <div className="description">
-                        <textarea placeholder="Describe your post" onChange={this.onDescriptionChange.bind(this)}></textarea>
+                        <textarea placeholder="Describe your post" onChange={this.onDescriptionChange}></textarea>
                     </div>
                     <div className="next-topic">
                         <input type="text" placeholder="Enter your next Topic" onChange={this.onTopicChange.bind(this)}></input>
